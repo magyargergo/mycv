@@ -4,7 +4,7 @@ import React from 'react';
 import {FaBriefcase, FaCircle} from 'react-icons/fa';
 
 const Experience: React.FC = () => (
-    <div id="experience" className="py-12">
+    <div id="experience" className="flex flex-1 flex-col pt-12">
         <div className="px-6 flex items-center mb-6">
             <FaBriefcase className="text-blue-700 mr-3 text-4xl"/>
             <h2 className="text-4xl font-extrabold text-blue-700">Experience</h2>
@@ -20,9 +20,9 @@ const Experience: React.FC = () => (
                         <FaCircle className="text-white text-xs"/>
                     </div>
                     {/* Company Header */}
-                    <div className="flex items-center">
-                        <h3 className="text-2xl font-semibold text-gray-800">Freelancer Outsourcing UK Limited</h3>
-                        <span className="ml-4 text-sm font-medium bg-blue-100 text-blue-700 py-1 px-2 rounded-full">
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Freelancer Outsourcing UK Limited</h3>
+                        <span className="text-sm font-medium bg-blue-100 text-blue-700 py-1 px-2 rounded-full w-5/12 text-center">
                         Total Duration: 5+ years
                     </span>
                     </div>
@@ -81,11 +81,11 @@ const Experience: React.FC = () => (
                         <FaCircle className="text-white text-xs"/>
                     </div>
                     {/* Company Header */}
-                    <div className="flex items-center">
-                        <h3 className="text-2xl font-semibold text-gray-800">Fornax</h3>
-                        <span className="ml-4 text-sm font-medium bg-blue-100 text-blue-700 py-1 px-2 rounded-full">
-                        Total Duration: 7 months
-                    </span>
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Fornax Kft. (Hungary)</h3>
+                        <span className="text-sm font-medium bg-blue-100 text-blue-700 py-1 px-2 rounded-full w-5/12 text-center">
+                            Total Duration: 7 months
+                        </span>
                     </div>
                     {/* Role */}
                     <div className="mt-4 mb-6">
@@ -115,11 +115,11 @@ const Experience: React.FC = () => (
                         <FaCircle className="text-white text-xs"/>
                     </div>
                     {/* Company Header */}
-                    <div className="flex items-center">
-                        <h3 className="text-2xl font-semibold text-gray-800">Minero IT Hungary Kft.</h3>
-                        <span className="ml-4 text-sm font-medium bg-blue-100 text-blue-700 py-1 px-2 rounded-full">
-                        Total Duration: 2 years 6 months
-                    </span>
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Minero IT Hungary Kft.</h3>
+                        <span className="text-sm font-medium bg-blue-100 text-blue-700 py-1 px-2 rounded-full w-5/12 text-center">
+                            Total Duration: 2 years 6 months
+                        </span>
                     </div>
 
                     {/* Java Developer */}
@@ -160,11 +160,11 @@ const Experience: React.FC = () => (
                         <FaCircle className="text-white text-xs"/>
                     </div>
                     {/* Company Header */}
-                    <div className="flex items-center">
-                        <h3 className="text-2xl font-semibold text-gray-800">FrontEndART Software Ltd.</h3>
-                        <span className="ml-4 text-sm font-medium bg-blue-100 text-blue-700 py-1 px-2 rounded-full">
-                        Total Duration: 2 year 3 months
-                    </span>
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">FrontEndART Software Ltd.</h3>
+                        <span className="text-sm font-medium bg-blue-100 text-blue-700 py-1 px-2 rounded-full w-5/12 text-center">
+                            Total Duration: 2 year 3 months
+                        </span>
                     </div>
 
                     {/* Junior Software Developer */}
