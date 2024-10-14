@@ -2,15 +2,18 @@
 
 import React from 'react';
 import {FaLinkedin, FaGithub, FaEnvelope, FaPhone} from 'react-icons/fa';
+import Image from "next/image";
 
 const ProfileCard: React.FC = () => (
     <div className="bg-white relative w-full h-full">
         {/* Image Section */}
-        <div className="relative mb-5">
-            <img
+        <div className="relative h-3/4 mb-5">
+            <Image
                 src="/avatars/me.jpeg"
                 alt="Gergo Magyar"
-                className="rounded-t-lg object-cover"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-t-lg"
             />
             {/* Overlay with Name, Job Title, and Icons */}
             <div className="absolute grid grid-cols-2 gap-4 bottom-0 left-0 right-0 p-4 bg-opacity-75 bg-white">

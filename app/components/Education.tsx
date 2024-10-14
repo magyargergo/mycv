@@ -21,7 +21,7 @@ const Education: React.FC = () => (
                     </div>
                     {/* Institution Header */}
                     <h3 className="text-2xl font-semibold text-gray-800">Corvinus University of Budapest</h3>
-                    <p className="text-gray-600">Master's Degree, Economist in Accountancy</p>
+                    <p className="text-gray-600">Master`&apos;s Degree, Economist in Accountancy</p>
                     <p className="text-gray-600">(2016 - 2021)</p>
                 </div>
 
@@ -34,7 +34,7 @@ const Education: React.FC = () => (
                     </div>
                     {/* Institution Header */}
                     <h3 className="text-2xl font-semibold text-gray-800">University of Szeged</h3>
-                    <p className="text-gray-600">Bachelor’s Degree, Computer Science</p>
+                    <p className="text-gray-600">Bachelor`&apos;s Degree, Computer Science</p>
                     <p className="text-gray-600">(2012 - 2016)</p>
                 </div>
 

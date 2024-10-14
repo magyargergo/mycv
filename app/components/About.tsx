@@ -11,15 +11,28 @@ const About: React.FC = () => (
         </div>
 
         <p className="text-gray-700 text-lg leading-relaxed mb-6 text-justify">
-            As a Senior Software Engineer with over five years at <span className="font-semibold">Freelancer.com</span>, I specialize in developing scalable, reliable solutions that drive platform stability and enhance user experience. My role involves full-stack development across frontend and backend, using technologies like <span className="font-semibold">Angular</span>, <span className="font-semibold">PHP</span>, <span className="font-semibold">Python</span>, <span className="font-semibold">Go</span>, <span className="font-semibold">Docker</span>, and <span className="font-semibold">AWS Services</span>. Leading initiatives to improve platform stability, I manage incident response, conduct root cause analyses, and collaborate across departments to ensure our technical solutions align with business objectives.
+            As a Senior Software Engineer with over five years at <span className="font-semibold">Freelancer Outsourcing UK Limited</span>,
+            I specialize in developing scalable, reliable solutions that drive platform stability and improve user experience.
+            My role involves full-stack development across frontend and backend, using technologies like <span className="font-semibold">
+            Angular</span>, <span className="font-semibold">PHP</span>, <span className="font-semibold">Python</span>, <span className="font-semibold">
+            Go</span>, <span className="font-semibold">Docker</span>, and <span className="font-semibold">AWS Services</span>.
+            Leading initiatives to improve platform stability, I manage incident response, conduct root cause analyses, and collaborate
+            across departments to ensure our technical solutions align with business objectives.
         </p>
 
         <p className="text-gray-700 text-lg leading-relaxed mb-6 text-justify">
-            I’ve successfully driven efficiency and productivity improvements, automating infrastructure with Docker and Jenkins to reduce deployment time by 30% and optimizing development environments to shorten testing cycles by 20%. By creating custom tools for remote and local debugging, I’ve enhanced developer productivity and streamlined workflows. I’m also passionate about mentoring team members and fostering a culture of continuous improvement, which contributes to our high-performance engineering team.
+            I have successfully driven efficiency and productivity improvements, automating infrastructure with Docker and Jenkins to
+            reduce deployment time by 30% and optimizing development environments to shorten testing cycles by 20%. By creating custom
+            tools for remote and local debugging, I have improved developer productivity and streamlined workflows. I am also passionate
+            about mentoring team members and fostering a culture of continuous improvement, which contributes to our high-performance engineering team.
         </p>
 
         <p className="text-gray-700 text-lg leading-relaxed mb-8 text-justify">
-            In previous roles, I’ve built a solid foundation in software development, security, and infrastructure. From implementing secure authentication solutions to developing RESTful web services and collaborating with international teams, I’ve gained diverse experience across various technology stacks. My career began with a focus on automation and optimization, allowing me to develop a results-oriented approach that leverages technology to solve complex problems and deliver high-quality, impactful solutions.
+            In previous roles, I have built a solid foundation in software development, security, and infrastructure.
+            From implementing secure authentication solutions to developing RESTful web services and collaborating with
+            international teams, I have gained diverse experience across various technology stacks. My career began with a
+            focus on automation and optimization, allowing me to develop a results-oriented approach that leverages technology
+            to solve complex problems and deliver high-quality, impactful solutions.
         </p>
     </div>
 );
