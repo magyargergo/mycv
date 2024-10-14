@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import {FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt, FaBriefcase, FaUserGraduate} from 'react-icons/fa';
+import {FaLinkedin, FaGithub, FaPhone, FaMapMarkerAlt, FaBriefcase, FaUserGraduate} from 'react-icons/fa';
 import Image from "next/image";
 import {FaAt} from "react-icons/fa6";
 
