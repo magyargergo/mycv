@@ -47,7 +47,7 @@ const Education: React.FC = () => {
                                 Corvinus University of Budapest
                             </h3>
                             <p className="text-sm sm:text-base text-gray-600">
-                                Master&apos;ss Degree, Economist in Accountancy
+                                Master&apos;s Degree, Economist in Accountancy
                             </p>
                             <p className="text-sm sm:text-base text-gray-600">(2016 - 2021)</p>
                         </div>
@@ -69,7 +69,7 @@ const Education: React.FC = () => {
                                 University of Szeged
                             </h3>
                             <p className="text-sm sm:text-base text-gray-600">
-                                Bachelor's Degree, Computer Science
+                                Bachelor&apos;s Degree, Computer Science
                             </p>
                             <p className="text-sm sm:text-base text-gray-600">(2012 - 2016)</p>
                         </div>
