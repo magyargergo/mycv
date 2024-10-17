@@ -1,5 +1,6 @@
 import './globals.css';
 import { ReactNode } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: 'Gergo Magyar | CV',
@@ -15,6 +16,7 @@ export default function RootLayout({
       <html lang="en">
           <body>
             {children}
+            <Analytics />
           </body>
       </html>
   );
