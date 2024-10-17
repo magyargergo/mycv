@@ -3,8 +3,8 @@ import { ReactNode } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
-  title: 'Gergo Magyar | CV',
-  description: 'Gergo Magyar\'s professional CV',
+  title: 'Gergo Magyar | Resume',
+  description: 'Gergo Magyar\'s professional Resume',
 };
 
 export default function RootLayout({

@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
                 <FaBriefcase className="text-blue-700 mr-2 sm:mr-3 text-2xl sm:text-3xl md:text-4xl" />
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-700">Experience</h2>
             </div>
-            <div className="px-4 sm:px-6 scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-gray-300 overflow-y-auto max-h-[calc(100vh-200px)]">
+            <div className="px-4 sm:px-6 scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-gray-300 overflow-y-auto">
                 <div className="border-l-2 sm:border-l-4 border-blue-200 ml-3 sm:ml-4">
 
                     {/* Freelancer.com */}
