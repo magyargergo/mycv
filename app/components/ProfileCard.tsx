@@ -47,7 +47,7 @@ const ProfileCard: React.FC = () => (
                     </div>
                     <div className="flex items-center text-gray-600">
                         <FaUserGraduate className="mr-3 text-blue-600 flex-shrink-0 text-xl"/>
-                        <span className="text-sm sm:text-base lg:text-lg">MSc in Accountancy</span>
+                        <span className="text-sm sm:text-base lg:text-lg">Computer Science</span>
                     </div>
                 </div>
 
