@@ -6,9 +6,9 @@ import Image from "next/image";
 import {FaAt} from "react-icons/fa6";
 
 const ProfileCard: React.FC = () => (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full flex flex-col">
+    <div className="flex flex-1 flex-col">
         {/* Image Section */}
-        <div className="relative w-full pt-[75%]">
+        <div className="relative w-full pt-[100%]">
             <Image
                 src="/avatars/me.jpeg"
                 alt="Gergo Magyar"
@@ -30,7 +30,8 @@ const ProfileCard: React.FC = () => (
         {/* Details Section */}
         <div className="p-4 sm:p-6 lg:p-8 flex-grow flex flex-col justify-between">
             <div className="space-y-4 sm:space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4 sm:gap-6">
+                <div
+                    className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4 sm:gap-6">
                     <a href="mailto:gergomagyar@icloud.com"
                        className="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
                         <FaAt className="mr-3 text-blue-600 flex-shrink-0 text-xl"/>
@@ -68,11 +69,14 @@ const ProfileCard: React.FC = () => (
             </div>
 
             {/* CTA Buttons */}
-            <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:gap-4">
-                <button className="bg-blue-600 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+            <div className="flex-none mt-3 sm:mt-4 grid grid-cols-2 gap-3 sm:gap-4">
+                <button
+                    className="bg-blue-600 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                     Download CV
                 </button>
-                <button className="bg-green-600 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-lg font-medium hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50" onClick={() => window.location.href = 'mailto:gergomagyar@icloud.com'}>
+                <button
+                    className="bg-green-600 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-lg font-medium hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+                    onClick={() => window.location.href = 'mailto:gergomagyar@icloud.com'}>
                     Contact Me
                 </button>
             </div>

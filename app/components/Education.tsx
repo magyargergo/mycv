@@ -35,7 +35,7 @@ const Education: React.FC = () => {
                     <div className="mb-6 sm:mb-8 relative">
                         {/* Icon */}
                         <div
-                            className="absolute -left-[13px] sm:-left-[18px] translate-y-0.5 w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center">
+                            className="absolute -left-[13px] sm:-left-[18px] translate-y-0.5 w-6 h-6 sm:w-8 sm:h-8 bg-gray-50 rounded-full flex items-center justify-center">
                             <div
                                 className="w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-full flex items-center justify-center">
                                 <FaCircle className="text-white text-[8px] sm:text-xs"/>
@@ -57,7 +57,7 @@ const Education: React.FC = () => {
                     <div className="mb-6 sm:mb-8 relative">
                         {/* Icon */}
                         <div
-                            className="absolute -left-[13px] sm:-left-[18px] translate-y-0.5 w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center">
+                            className="absolute -left-[13px] sm:-left-[18px] translate-y-0.5 w-6 h-6 sm:w-8 sm:h-8 bg-gray-50 rounded-full flex items-center justify-center">
                             <div
                                 className="w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-full flex items-center justify-center">
                                 <FaCircle className="text-white text-[8px] sm:text-xs"/>
@@ -79,7 +79,7 @@ const Education: React.FC = () => {
                     <div className="mb-6 sm:mb-8 relative">
                         {/* Icon */}
                         <div
-                            className="absolute -left-[13px] sm:-left-[18px] translate-y-0.5 w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center">
+                            className="absolute -left-[13px] sm:-left-[18px] translate-y-0.5 w-6 h-6 sm:w-8 sm:h-8 bg-gray-50 rounded-full flex items-center justify-center">
                             <div
                                 className="w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-full flex items-center justify-center">
                                 <FaCircle className="text-white text-[8px] sm:text-xs"/>
