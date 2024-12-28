@@ -1,9 +1,9 @@
 "use client";
 
 import React from 'react';
-import About from './About';
-import Education from './Education';
-import Experience from './Experience';
+import About from './About/About';
+import Education from './Education/Education';
+import Experience from './Experience/Experience';
 
 interface SectionProps {
     selectedSection: string;
