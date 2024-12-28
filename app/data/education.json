@@ -1,0 +1,20 @@
+{
+  "title": "Education",
+  "items": [
+    {
+      "institution": "Corvinus University of Budapest",
+      "degree": "Master's Degree, Economist in Accountancy",
+      "duration": "2016 - 2021"
+    },
+    {
+      "institution": "University of Szeged",
+      "degree": "Bachelor's Degree, Computer Science",
+      "duration": "2012 - 2016"
+    },
+    {
+      "institution": "József Attila Secondary Grammar School",
+      "degree": "High School Diploma, Mathematics and Informatics Faculty",
+      "duration": "2008 - 2012"
+    }
+  ]
+}
