@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutContent: React.FC<{ paragraphs: string[] }> = ({ paragraphs }) => (
+const AboutContentDisplay: React.FC<{ paragraphs: string[] }> = ({ paragraphs }) => (
     <div className="px-4 sm:px-6 scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-gray-300 overflow-y-auto">
         {paragraphs.map((paragraph, index) => (
             <p
@@ -13,4 +13,4 @@ const AboutContent: React.FC<{ paragraphs: string[] }> = ({ paragraphs }) => (
     </div>
 );
 
-export default AboutContent;
+export default AboutContentDisplay;

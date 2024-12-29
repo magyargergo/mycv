@@ -1,4 +1,4 @@
-export interface IAboutContent {
+export interface AboutContent {
     title: string;
     content: string[];
 }

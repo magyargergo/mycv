@@ -4,20 +4,27 @@ import React from 'react';
 import About from './About/About';
 import Education from './Education/Education';
 import Experience from './Experience/Experience';
+import { SectionData } from "@/page";
+
+export type SectionType = 'about' | 'education' | 'experience';
 
 interface SectionProps {
-    selectedSection: string;
+    selectedSection: SectionType;
+    initialData: SectionData;
 }
 
-const Section: React.FC<SectionProps> = ({ selectedSection }) => {
+const Section: React.FC<SectionProps> = ({
+    selectedSection,
+    initialData,
+}) => {
     const renderSection = () => {
         switch (selectedSection) {
             case 'education':
-                return <Education />;
+                return <Education data={initialData[selectedSection]} />;
             case 'experience':
-                return <Experience />;
+                return <Experience data={initialData[selectedSection]} />;
             default:
-                return <About />;
+                return <About data={initialData[selectedSection]} />;
         }
     };
 

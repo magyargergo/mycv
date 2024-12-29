@@ -2,13 +2,18 @@
 
 import React, { useState } from 'react';
 import { FaUser, FaBriefcase, FaGraduationCap, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { SectionType } from "@/components/Section";
 
 interface SidebarProps {
-    onSelectSection: (section: string) => void;
-    selectedSection: string;
+    onSelectSection: (section: SectionType) => void;
+    selectedSection: SectionType;
 }
 
-const menuItems = [
+const menuItems: readonly {
+    label: string;
+    icon: JSX.Element;
+    section: SectionType;
+}[] = [
     { label: 'About', icon: <FaUser />, section: 'about' },
     { label: 'Experience', icon: <FaBriefcase />, section: 'experience' },
     { label: 'Education', icon: <FaGraduationCap />, section: 'education' },

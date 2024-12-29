@@ -5,21 +5,22 @@ import { FaGraduationCap } from 'react-icons/fa';
 import { SectionLayout} from "../shared/SectionLayout/SectionLayout";
 import { Timeline } from "../shared/Timeline/Timeline";
 import { TimelineItem } from "../shared/Timeline/TimelineItem";
-import { title, items } from "../../data/education.json";
 import { EducationContent } from "./types";
 import EducationItemContent from "./EducationItemContent";
 
-const Education: React.FC = () => {
-    const educationData: EducationContent = { title, items };
+interface EducationSectionProps {
+    data: EducationContent;
+}
 
+const Education: React.FC<EducationSectionProps> = ({ data }) => {
     return (
         <SectionLayout
             id="education"
             icon={<FaGraduationCap />}
-            title={educationData.title}
+            title={data.title}
         >
             <Timeline className="max-h-[calc(100vh-200px)]">
-                {educationData.items.map((education, index) => (
+                {data.items.map((education, index) => (
                     <TimelineItem key={index}>
                         <EducationItemContent education={education} />
                     </TimelineItem>

@@ -2,22 +2,22 @@
 
 import React from 'react';
 import { FaUser } from 'react-icons/fa';
-import { title, content } from "../../data/about.json";
 import { SectionLayout } from "../shared/SectionLayout/SectionLayout";
-import { IAboutContent } from "./types";
-import AboutContent from "./AboutContent";
+import { AboutContent } from "./types";
+import AboutContentDisplay from "./AboutContentDisplay";
 
+interface AboutSectionProps {
+    readonly data: AboutContent;
+}
 
-const About: React.FC = () => {
-    const aboutData: IAboutContent = { title, content };
-
+const About: React.FC<AboutSectionProps> = ({ data }) => {
     return (
         <SectionLayout
             id="about"
             icon={<FaUser />}
-            title={aboutData.title}
+            title={data.title}
         >
-            <AboutContent paragraphs={aboutData.content} />
+            <AboutContentDisplay paragraphs={data.content} />
         </SectionLayout>
     );
 };
