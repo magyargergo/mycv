@@ -2,8 +2,6 @@
 export interface TimelineItemProps {
     // Content to be rendered inside the timeline item
     children: React.ReactNode;
-    // Optional icon override for this specific item
-    icon?: React.ReactNode;
     // Custom classes for the item container
     className?: string;
 }

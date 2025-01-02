@@ -1,27 +1,29 @@
-import { FaCircle } from 'react-icons/fa';
+import React from 'react';
+import { Timeline as FlowbiteTimeline } from 'flowbite-react';
 import { TimelineItemProps } from './types';
 
+const TimelineIcon: React.FC = () => {
+    return (
+        <div
+            className="size-5 sm:size-6 bg-white rounded-full flex items-center justify-center shadow-[0_0_0_4px_rgba(219,234,254,1)]">
+            <div className="size-3 sm:size-4 bg-blue-500 rounded-full shadow-sm flex items-center justify-center">
+                <span>●</span>
+            </div>
+        </div>
+    );
+};
+
 export const TimelineItem: React.FC<TimelineItemProps> = ({
-  children,
-  icon = <FaCircle className="text-white text-[8px] sm:text-xs" />,
-  className = ""
-}) => {
+                                                              children,
+                                                              className = ""
+                                                          }) => {
     // The timeline item consists of an icon on the line and content beside it
     return (
-        <div className={`mb-6 sm:mb-8 relative ${className}`}>
-            {/* This creates the circular container for the icon */}
-            <div
-                className="absolute -left-[13px] sm:-left-[18px] translate-y-0.5 w-6 h-6 sm:w-8 sm:h-8 bg-gray-50 rounded-full flex items-center justify-center"
-            >
-                {/* Inner circle with the icon */}
-                <div
-                    className="w-4 h-4 sm:w-6 sm:h-6 bg-blue-600 rounded-full flex items-center justify-center"
-                >
-                    {icon}
-                </div>
-            </div>
-            {/* Content container */}
-            {children}
-        </div>
+        <FlowbiteTimeline.Item className={`${className} relative`}>
+            <FlowbiteTimeline.Point icon={TimelineIcon}/>
+            <FlowbiteTimeline.Content>
+                {children}
+            </FlowbiteTimeline.Content>
+        </FlowbiteTimeline.Item>
     );
 };
