@@ -5,6 +5,27 @@ import {FaLinkedin, FaGithub, FaPhone, FaMapMarkerAlt, FaBriefcase, FaUserGradua
 import Image from "next/image";
 import {FaAt} from "react-icons/fa6";
 
+const handleDownload = () => {
+    // PDF file URL using a relative path
+    const pdfUrl = "./assets/documents/Gergo_Magyar_CV.pdf";
+
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+
+    // Set the file name for the download
+    link.download = "Gergo_Magyar_CV.pdf";
+
+    // Append to the document
+    document.body.appendChild(link);
+
+    // Trigger the download
+    link.click();
+
+    // Clean up - remove the element
+    document.body.removeChild(link);
+};
+
 const ProfileCard: React.FC = () => (
     <div className="flex flex-1 flex-col">
         {/* Image Section */}
@@ -71,6 +92,7 @@ const ProfileCard: React.FC = () => (
             {/* CTA Buttons */}
             <div className="flex-none mt-3 sm:mt-4 grid grid-cols-2 gap-3 sm:gap-4">
                 <button
+                    onClick={handleDownload}
                     className="bg-blue-600 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base lg:text-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                     Download CV
                 </button>
