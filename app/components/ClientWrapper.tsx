@@ -1,45 +1,109 @@
 'use client';
 
-import { useState } from 'react';
-import Sidebar from './Sidebar';
-import ProfileCard from './ProfileCard';
-import Section, {SectionType} from './Section';
-import MobileNavBar from './MobileNavBar';
+import { useEffect, useState } from 'react';
+import Sidebar from './Navigation/Sidebar';
+import ProfileSection from './ProfileSection';
+import ContentSection from './Content/ContentSection';
+import MobileNavBar from './Navigation/MobileNavBar';
 import { SectionData } from "@/page";
 import { Flowbite } from "flowbite-react";
 import { customTheme } from "@/theme";
+import { SectionType } from "@/components/types";
 
 export default function ClientWrapper({ initialData }: { initialData: SectionData }) {
     const [selectedSection, setSelectedSection] = useState<SectionType>('about');
 
+    // Add scroll management to prevent layout shift
+    useEffect(() => {
+        // Save scroll position before section change
+        let scrollPosition = 0;
+
+        const handleSectionChange = () => {
+            // Save current scroll position
+            scrollPosition = window.scrollY;
+        };
+
+        // Restore scroll position after section change
+        const restoreScroll = () => {
+            setTimeout(() => {
+                window.scrollTo(0, scrollPosition);
+            }, 10);
+        };
+
+        // Listen for section changes
+        window.addEventListener('sectionChange', handleSectionChange);
+        window.addEventListener('sectionChanged', restoreScroll);
+
+        // Fix for mobile viewport
+        const setMobileHeight = () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        };
+
+        setMobileHeight();
+        window.addEventListener('resize', setMobileHeight);
+        window.addEventListener('orientationchange', setMobileHeight);
+
+        return () => {
+            window.removeEventListener('sectionChange', handleSectionChange);
+            window.removeEventListener('sectionChanged', restoreScroll);
+            window.removeEventListener('resize', setMobileHeight);
+            window.removeEventListener('orientationchange', setMobileHeight);
+        };
+    }, []);
+
+    // Handle section change with event dispatch
+    const handleSectionChange = (section: SectionType) => {
+        // Dispatch event before changing section
+        window.dispatchEvent(new Event('sectionChange'));
+
+        // Change section
+        setSelectedSection(section);
+
+        // Dispatch event after changing section
+        setTimeout(() => {
+            window.dispatchEvent(new Event('sectionChanged'));
+        }, 50);
+    };
+
     return (
         <Flowbite theme={{ theme: customTheme }}>
-            <div className="flex bg-gray-100 min-h-screen">
+            <div className="bg-gray-50 min-h-screen overflow-x-hidden">
+                {/* Desktop Sidebar */}
                 <Sidebar
-                    onSelectSection={setSelectedSection}
+                    onSelectSection={handleSectionChange}
                     selectedSection={selectedSection}
                 />
 
-                <main className="flex flex-col flex-grow w-full sm:ml-16 md:ml-48 lg:ml-64 xl:ml-72 transition-all duration-300 ease-in-out">
-                    <div className="flex flex-col flex-grow p-4 sm:p-6 md:p-8 lg:p-10 lg:flex-row lg:space-x-8 mb-16 sm:mb-0 md:h-screen">
-                        <section className="flex flex-col h-full w-full lg:w-[45%] xl:w-[40%] bg-gray-50 rounded-xl shadow-lg mb-6 lg:mb-0">
-                            <ProfileCard />
-                        </section>
+                {/* Main Content */}
+                <main className="sm:ml-[60px] transition-all pb-16 sm:pb-6">
+                    <div className="max-w-6xl mx-auto p-4 md:p-6 lg:p-8">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                            {/* Profile Section */}
+                            <div className="lg:col-span-1">
+                                <div className="sticky top-6">
+                                    <ProfileSection />
+                                </div>
+                            </div>
 
-                        <section className="flex flex-1 w-full lg:w-[55%] xl:w-[60%] bg-gray-50 rounded-xl shadow-lg p-4 sm:p-6">
-                            <Section
-                                selectedSection={selectedSection}
-                                initialData={initialData}
-                            />
-                        </section>
+                            {/* Content Section - Adapts to content height */}
+                            <div className="lg:col-span-2">
+                                <div className="bg-white rounded-lg shadow-sm p-6">
+                                    <ContentSection
+                                        key={selectedSection} // Force fresh render on section change
+                                        selectedSection={selectedSection}
+                                        initialData={initialData}
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="sm:hidden mt-auto">
-                        <MobileNavBar
-                            onSelectSection={setSelectedSection}
-                            selectedSection={selectedSection}
-                        />
-                    </div>
+                    {/* Mobile Navigation */}
+                    <MobileNavBar
+                        onSelectSection={handleSectionChange}
+                        selectedSection={selectedSection}
+                    />
                 </main>
             </div>
         </Flowbite>

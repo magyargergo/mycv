@@ -1,15 +1,18 @@
 import { Suspense } from 'react';
 import ClientWrapper from '@/components/ClientWrapper';
-import { AboutContent } from "@/components/About/types";
-import { EducationContent} from "@/components/Education/types";
-import { ExperienceContent } from "@/components/Experience/types";
+import {
+    AboutSectionData,
+    EducationSectionData,
+    ExperienceSectionData
+} from "@/components/types";
 import { getResumeData } from "../lib/data";
 import Loading from "@/loading";
 
+
 export interface SectionData {
-    about: AboutContent;
-    education: EducationContent;
-    experience: ExperienceContent;
+    about: AboutSectionData;
+    education: EducationSectionData;
+    experience: ExperienceSectionData;
 }
 
 export default async function Home() {
