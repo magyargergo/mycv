@@ -11,23 +11,23 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ data }) => {
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full animate-fadeIn">
             <SectionHeader icon={<FaUser />} title={data.title} />
 
             <div>
                 {data.content.map((paragraph, index) => (
                     <div key={index} className="mb-4">
                         {index === 0 ? (
-                            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                                <span className="text-blue-600 font-bold text-xl sm:text-2xl float-left mr-1.5 sm:mr-2 mt-0.5 sm:mt-1">A</span>
+                            <p className="text-foreground leading-relaxed text-sm sm:text-base">
+                                <span className="text-primary font-bold text-xl sm:text-2xl float-left mr-1.5 sm:mr-2 mt-0.5 sm:mt-1">A</span>
                                 {paragraph.substring(1)}
                             </p>
                         ) : (
-                            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                            <p className="text-foreground leading-relaxed text-sm sm:text-base">
                                 {paragraph}
                             </p>
                         )}
-                        {index === 0 && <hr className="my-3 sm:my-4 border-gray-200" />}
+                        {index === 0 && <hr className="my-3 sm:my-4" />}
                     </div>
                 ))}
             </div>

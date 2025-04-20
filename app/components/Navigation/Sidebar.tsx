@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Tooltip } from 'flowbite-react';
+import { Sidebar } from 'flowbite-react';
 import { NAV_ITEMS } from './NavItems';
 import { SectionType } from '../types';
 
@@ -10,42 +10,37 @@ interface SidebarProps {
     selectedSection: SectionType;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ onSelectSection, selectedSection }) => {
-    return (
-        <aside className="fixed top-0 left-0 h-full bg-blue-600 text-white hidden sm:flex flex-col w-[60px] z-50 shadow-lg">
-            {/* Logo Area */}
-            <div className="flex justify-center items-center h-16 border-b border-blue-500/30">
-                <div className="text-white font-bold text-xl">GM</div>
-            </div>
+const AppSidebar: React.FC<SidebarProps> = ({ onSelectSection, selectedSection }) => {
+    const logoSrc = "data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgNDAgNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiM2MzY2ZjEiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlciwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNmZmZmZmYiPkdNPC90ZXh0Pgo8L3N2Zz4K";
 
-            {/* Navigation Items */}
-            <div className="flex-1 flex flex-col items-center pt-8 space-y-6">
-                {NAV_ITEMS.map((item) => (
-                    <Tooltip
-                        key={item.section}
-                        content={item.label}
-                        placement="right"
-                        style="light"
-                    >
-                        <button
-                            onClick={() => onSelectSection(item.section)}
-                            className={`
-                                w-full flex justify-center p-3
-                                ${selectedSection === item.section ? 'bg-blue-700' : 'hover:bg-blue-700/70'}
-                                transition-colors
-                            `}
-                            aria-label={item.label}
-                        >
-                            <item.icon
-                                size={20}
-                                className={selectedSection === item.section ? 'text-white' : 'text-blue-200'}
-                            />
-                        </button>
-                    </Tooltip>
-                ))}
-            </div>
-        </aside>
+    return (
+        <div className="fixed top-0 left-0 h-screen w-[60px] z-50">
+            <Sidebar
+                aria-label="Main navigation sidebar"
+                collapsed={true}
+                className="h-full"
+            >
+                <Sidebar.Logo href="#" img={logoSrc} />
+
+                <Sidebar.Items className="flex-grow">
+                    <Sidebar.ItemGroup>
+                        {NAV_ITEMS.map((item) => (
+                            <Sidebar.Item
+                                key={item.section}
+                                as="button"
+                                onClick={() => onSelectSection(item.section)}
+                                icon={item.icon}
+                                aria-label={item.label}
+                                active={selectedSection === item.section}
+                            >
+                                {item.label}
+                            </Sidebar.Item>
+                        ))}
+                    </Sidebar.ItemGroup>
+                </Sidebar.Items>
+            </Sidebar>
+        </div>
     );
 };
 
-export default Sidebar;
+export default AppSidebar;

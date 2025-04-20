@@ -9,11 +9,11 @@ interface SectionHeaderProps {
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ icon, title }) => {
     return (
-        <div className="flex items-center mb-6 pb-2 border-b border-gray-100">
-            <div className="text-blue-600 mr-3">
+        <div className="flex items-center mb-8 pb-2 border-b">
+            <div className="text-primary mr-3">
                 {React.cloneElement(icon, { size: 22 })}
             </div>
-            <h2 className="text-2xl font-bold text-gray-800">
+            <h2 className="text-2xl font-extrabold text-foreground">
                 {title}
             </h2>
         </div>

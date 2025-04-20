@@ -4,12 +4,12 @@ interface EducationItem {
     duration: string;
 }
 
-interface Role {
+export interface Role {
     title: string;
     responsibilities: string[];
 }
 
-interface Company {
+export interface Company {
     name: string;
     totalDuration: string;
     roles: Role[];

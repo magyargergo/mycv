@@ -13,6 +13,8 @@ import {
     FaEnvelope
 } from 'react-icons/fa';
 import Image from "next/image";
+import ContactInfoItem from './ContactInfoItem';
+import SocialLink from './SocialLink';
 
 const ProfileSection: React.FC = () => {
     const handleDownload = () => {
@@ -26,102 +28,60 @@ const ProfileSection: React.FC = () => {
     };
 
     return (
-        <Card className="overflow-hidden border-0 shadow-md">
-            {/* Unified header style with gradient background */}
-            <div className="flex items-center p-5 bg-gradient-to-r from-blue-600 to-blue-500">
-                {/* Profile picture */}
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white flex-shrink-0">
+        <Card>
+            {/* Use primary background gradient */}
+            <div className="group flex items-center p-3 sm:p-5 bg-gradient-to-r from-primary to-primary/90 -m-6 mb-0 rounded-t-lg">
+                {/* Smaller profile picture on mobile */}
+                <div className="relative w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white flex-shrink-0">
+                    {/* Add transition and group-hover scale effect */}
                     <Image
                         src="/avatars/me.jpeg"
                         alt="Gergo Magyar"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center 25%"
+                        fill
+                        sizes="(max-width: 640px) 56px, 80px"
+                        className="object-cover object-[center_25%] transition-transform duration-300 ease-in-out group-hover:scale-110"
                     />
                 </div>
-
-                {/* Name and title */}
-                <div className="ml-4 text-white">
-                    <h1 className="text-xl sm:text-2xl font-bold">Gergo Magyar</h1>
-                    <div className="flex items-center text-blue-50 text-sm">
-                        <FaBriefcase className="mr-2" size={14} />
+                {/* Smaller margin/text on mobile */}
+                <div className="ml-2 sm:ml-4 text-primary-foreground">
+                    <h1 className="text-lg sm:text-2xl font-bold">Gergo Magyar</h1>
+                     {/* Use lighter blue text */}
+                    <div className="flex items-center text-primary-foreground/80 text-xs"> 
+                        <FaBriefcase className="mr-1.5" size={12} />
                         Senior Software Engineer
                     </div>
                 </div>
             </div>
 
-            <div className="p-5 space-y-4">
-                {/* Badges */}
-                <div className="flex flex-wrap gap-2">
-                    <Badge color="info" size="sm" className="px-3 py-1.5">Full Stack Development</Badge>
-                    <Badge color="info" size="sm" className="px-3 py-1.5">9+ Years Experience</Badge>
-                    <Badge color="info" size="sm" className="px-3 py-1.5">Permanent UK Resident</Badge>
+            {/* Reduce body padding/spacing for mobile */}
+            <div className="p-3 space-y-3 sm:p-5 sm:space-y-6">
+                {/* Smaller badges (xs) on mobile */} 
+                <div className="flex flex-wrap gap-1.5">
+                    <Badge color="info" size="xs" className="sm:hidden">Full Stack</Badge> {/* Abbreviate? */} 
+                    <Badge color="info" size="sm" className="hidden sm:inline-flex">Full Stack Development</Badge> 
+                    <Badge color="info" size="xs" className="sm:hidden">9+ Years Exp.</Badge>
+                    <Badge color="info" size="sm" className="hidden sm:inline-flex">9+ Years Experience</Badge>
+                    <Badge color="info" size="xs" className="sm:hidden">UK Resident</Badge>
+                    <Badge color="info" size="sm" className="hidden sm:inline-flex">Permanent UK Resident</Badge>
                 </div>
 
                 {/* Contact Info */}
-                <div className="grid grid-cols-2 gap-3">
-                    <div className="flex items-center text-gray-700">
-                        <div className="bg-blue-50 p-2 rounded-full mr-3">
-                            <FaMapMarkerAlt className="text-blue-600" size={14} />
-                        </div>
-                        <span className="text-sm">Woking, UK</span>
-                    </div>
-
-                    <div className="flex items-center text-gray-700">
-                        <div className="bg-blue-50 p-2 rounded-full mr-3">
-                            <FaUserGraduate className="text-blue-600" size={14} />
-                        </div>
-                        <span className="text-sm">Computer Science</span>
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 sm:pt-4">
+                    <ContactInfoItem icon={<FaMapMarkerAlt />} text="Woking, UK" />
+                    <ContactInfoItem icon={<FaUserGraduate />} text="Computer Science" />
                 </div>
 
                 {/* Buttons and Social Links */}
-                <div className="pt-2">
-                    {/* Download Button */}
-                    <Button
-                        color="blue"
-                        size="sm"
-                        onClick={handleDownload}
-                        className="w-full shadow-sm mb-4"
-                    >
+                <div className="pt-2 sm:pt-4">
+                    <Button color="blue" size="sm" onClick={handleDownload} className="w-full mb-3 sm:mb-4">
                         <FaDownload className="mr-2" size={14} />
                         Download CV
                     </Button>
-
-                    {/* Social Icons */}
-                    <div className="flex justify-evenly">
-                        <a
-                            href="https://linkedin.com/in/gergomagyar"
-                            className="p-3 rounded-full bg-gray-100 hover:bg-blue-50 transition-colors"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn Profile"
-                        >
-                            <FaLinkedin size={18} className="text-blue-600" />
-                        </a>
-                        <a
-                            href="https://github.com/magyargergo"
-                            className="p-3 rounded-full bg-gray-100 hover:bg-blue-50 transition-colors"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub Profile"
-                        >
-                            <FaGithub size={18} className="text-gray-700" />
-                        </a>
-                        <a
-                            href="mailto:gergomagyar@icloud.com"
-                            className="p-3 rounded-full bg-gray-100 hover:bg-blue-50 transition-colors"
-                            aria-label="Email Me"
-                        >
-                            <FaEnvelope size={18} className="text-blue-600" />
-                        </a>
-                        <a
-                            href="tel:+447951225614"
-                            className="p-3 rounded-full bg-gray-100 hover:bg-blue-50 transition-colors"
-                            aria-label="Call Me"
-                        >
-                            <FaPhone size={18} className="text-blue-600" />
-                        </a>
+                    <div className="flex justify-evenly pt-2">
+                        <SocialLink href="https://linkedin.com/in/gergomagyar" icon={<FaLinkedin className="text-primary" />} label="LinkedIn Profile" />
+                        <SocialLink href="https://github.com/magyargergo" icon={<FaGithub className="text-foreground" />} label="GitHub Profile" />
+                        <SocialLink href="mailto:gergomagyar@icloud.com" icon={<FaEnvelope className="text-primary" />} label="Email Me" />
+                        <SocialLink href="tel:+447951225614" icon={<FaPhone className="text-primary" />} label="Call Me" />
                     </div>
                 </div>
             </div>
