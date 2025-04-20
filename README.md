@@ -15,7 +15,7 @@ The project follows a clean, organized structure for better maintainability:
 
 ```
 app/
-├── site/              # Root site layout and pages
+├── (site)/            # Root site layout and pages for Next.js
 │   ├── page.tsx       # Homepage
 │   ├── layout.tsx     # Root layout
 │   ├── error.tsx      # Error handling
