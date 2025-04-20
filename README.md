@@ -1,4 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My CV - Professional Resume Website
+
+A modern, responsive resume website built with Next.js, Tailwind CSS, and Flowbite.
+
+## Project Structure
+
+The project follows a clean, organized structure for better maintainability:
+
+```
+app/
+├── site/              # Root site layout and pages
+│   ├── page.tsx       # Homepage
+│   ├── layout.tsx     # Root layout
+│   ├── error.tsx      # Error handling
+│   └── loading.tsx    # Loading states
+│
+├── components/        # UI components organized by feature/purpose
+│   ├── Content/       # Content-related components
+│   ├── Navigation/    # Navigation components
+│   └── ...            # Other components
+│
+├── theme/             # Theme-related code
+│   ├── config.ts      # Theme configuration
+│   ├── provider.tsx   # Theme provider component
+│   ├── toggle.tsx     # Theme toggle component
+│   └── hydration.ts   # Theme hydration script
+│
+├── styles/            # Global styles
+│   └── globals.css    # Global CSS including theme variables
+│
+├── lib/               # Utilities and helpers
+│   └── data.ts        # Data fetching functions
+│
+├── data/              # Data files (JSON)
+│   ├── about.json
+│   ├── education.json
+│   └── experience.json
+```
+
+## Features
+
+- 🌓 Dark/Light mode toggle with system preference detection
+- 📱 Fully responsive design for all device sizes
+- 🎨 Custom themeable UI with CSS variables
+- ⚡ Fast performance with Next.js App Router
+- 🔍 SEO optimized
+- 🧩 Component-based architecture
+
+## Theme System
+
+The theme system is implemented with:
+- CSS variables for colors and design tokens
+- React context for theme state management
+- localStorage for persisting user preferences
+- Server/client hydration handling to prevent flicker
+
+## Development
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Adding New Features
+
+When adding new features or components:
+- Place components in the appropriate directory based on their purpose
+- Follow the existing naming conventions
+- Use the theme system for consistent styling
+- Update this README if you add major new functionality
 
 ## Getting Started
 
