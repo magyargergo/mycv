@@ -30,4 +30,4 @@ export const themeScript = `
 })();
 `;
 
-export default themeScript; 
+export default themeScript;

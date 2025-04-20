@@ -1,33 +1,33 @@
 interface EducationItem {
-    institution: string;
-    degree: string;
-    duration: string;
+  institution: string;
+  degree: string;
+  duration: string;
 }
 
 export interface Role {
-    title: string;
-    responsibilities: string[];
+  title: string;
+  responsibilities: string[];
 }
 
 export interface Company {
-    name: string;
-    totalDuration: string;
-    roles: Role[];
+  name: string;
+  totalDuration: string;
+  roles: Role[];
 }
 
 export type SectionType = 'about' | 'education' | 'experience';
 
 export interface AboutSectionData {
-    title: string;
-    content: string[];
+  title: string;
+  content: string[];
 }
 
 export interface EducationSectionData {
-    title: string;
-    items: EducationItem[];
+  title: string;
+  items: EducationItem[];
 }
 
 export interface ExperienceSectionData {
-    title: string;
-    companies: Company[];
+  title: string;
+  companies: Company[];
 }

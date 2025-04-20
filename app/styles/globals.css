@@ -85,25 +85,25 @@
 /* Custom component styles */
 @layer components {
   /* Education degree badges */
-  .dark [color="info"].mb-3 {
+  .dark [color='info'].mb-3 {
     @apply bg-primary/30 text-primary-foreground/95 border-primary/40 font-medium shadow-sm;
   }
-  
+
   /* Theme toggle container */
   .theme-toggle-container {
     @apply fixed top-3 z-50 bg-background/10 backdrop-blur-sm rounded-full shadow-sm p-0.5;
     right: 0.75rem;
   }
-  
+
   @media (min-width: 640px) {
     .theme-toggle-container {
       right: 1.5rem;
     }
   }
-  
+
   @media (min-width: 768px) {
     .theme-toggle-container {
       right: 2.5rem;
     }
   }
-} 
+}

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useTheme } from "./provider";
-import { Button } from "flowbite-react";
-import { useState, useEffect } from "react";
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
+import { useTheme } from './provider';
+import { Button } from 'flowbite-react';
+import { useState, useEffect } from 'react';
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -21,10 +21,7 @@ export function ThemeToggle() {
   // Render placeholder with same dimensions to prevent layout shift
   if (!mounted) {
     return (
-      <div 
-        className="flex items-center justify-center invisible" 
-        aria-hidden="true"
-      >
+      <div className="flex items-center justify-center invisible" aria-hidden="true">
         <div className="h-[30px] w-[30px]"></div>
       </div>
     );
@@ -49,4 +46,4 @@ export function ThemeToggle() {
       </span>
     </Button>
   );
-} 
+}

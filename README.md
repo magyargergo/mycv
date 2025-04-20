@@ -49,6 +49,7 @@ app/
 ## Theme System
 
 The theme system is implemented with:
+
 - CSS variables for colors and design tokens
 - React context for theme state management
 - localStorage for persisting user preferences
@@ -57,11 +58,13 @@ The theme system is implemented with:
 ## Development
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Run the development server:
+
    ```bash
    npm run dev
    ```
@@ -71,6 +74,7 @@ The theme system is implemented with:
 ## Adding New Features
 
 When adding new features or components:
+
 - Place components in the appropriate directory based on their purpose
 - Follow the existing naming conventions
 - Use the theme system for consistent styling

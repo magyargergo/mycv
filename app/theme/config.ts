@@ -43,97 +43,102 @@ export const themeColors = {
     border: '216 15% 28%', // subtle border
     input: '216 15% 28%',
     ring: '208 55% 52%', // focus ring - matches primary
-  }
+  },
 };
 
 // Flowbite custom theme configuration
 export const customTheme: CustomFlowbiteTheme = {
   // Global theme
   button: {
-    base: "group flex items-center justify-center text-center font-medium relative focus:z-10 focus:outline-none focus:ring-2 focus:ring-ring transition-all duration-300",
+    base: 'group flex items-center justify-center text-center font-medium relative focus:z-10 focus:outline-none focus:ring-2 focus:ring-ring transition-all duration-300',
     color: {
-      blue: "text-primary-foreground bg-primary hover:bg-primary/90 border-0 active:bg-primary/80 shadow-sm hover:shadow",
-      green: "text-white bg-teal-500 hover:bg-teal-600 border-0 active:bg-teal-700 shadow-sm hover:shadow",
-      light: "text-foreground bg-background/70 border border-border hover:bg-accent hover:text-accent-foreground shadow-sm hover:shadow"
+      blue: 'text-primary-foreground bg-primary hover:bg-primary/90 border-0 active:bg-primary/80 shadow-sm hover:shadow',
+      green:
+        'text-white bg-teal-500 hover:bg-teal-600 border-0 active:bg-teal-700 shadow-sm hover:shadow',
+      light:
+        'text-foreground bg-background/70 border border-border hover:bg-accent hover:text-accent-foreground shadow-sm hover:shadow',
     },
     size: {
-      xs: "text-xs px-2 py-1 rounded-sm",
-      sm: "text-sm px-3 py-2 rounded-md",
-      md: "text-sm px-4 py-2.5 rounded-md",
-      lg: "text-base px-5 py-2.5 rounded-lg",
-      xl: "text-base px-6 py-3 rounded-lg"
-    }
+      xs: 'text-xs px-2 py-1 rounded-sm',
+      sm: 'text-sm px-3 py-2 rounded-md',
+      md: 'text-sm px-4 py-2.5 rounded-md',
+      lg: 'text-base px-5 py-2.5 rounded-lg',
+      xl: 'text-base px-6 py-3 rounded-lg',
+    },
   },
 
   card: {
     root: {
-      base: "flex rounded-lg border bg-card text-card-foreground shadow-md transition-all duration-300",
-      children: "flex h-full flex-col p-6",
+      base: 'flex rounded-lg border bg-card text-card-foreground shadow-md transition-all duration-300',
+      children: 'flex h-full flex-col p-6',
       horizontal: {
-        off: "flex-col",
-        on: "flex-col md:flex-row"
-      }
-    }
+        off: 'flex-col',
+        on: 'flex-col md:flex-row',
+      },
+    },
   },
 
   badge: {
     root: {
-      base: "flex h-fit items-center gap-2 font-medium transition-colors rounded-sm",
+      base: 'flex h-fit items-center gap-2 font-medium transition-colors rounded-sm',
       color: {
-        info: "bg-primary/10 text-primary border border-primary/20 dark:bg-primary/20 dark:text-primary-foreground dark:border-primary/30 dark:font-medium",
-        gray: "bg-secondary text-secondary-foreground border",
-        success: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400",
-        purple: "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400"
+        info: 'bg-primary/10 text-primary border border-primary/20 dark:bg-primary/20 dark:text-primary-foreground dark:border-primary/30 dark:font-medium',
+        gray: 'bg-secondary text-secondary-foreground border',
+        success: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
+        purple: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400',
       },
       size: {
-        xs: "p-1 text-xs rounded-sm",
-        sm: "px-3 py-1.5 text-xs rounded-md"
-      }
-    }
+        xs: 'p-1 text-xs rounded-sm',
+        sm: 'px-3 py-1.5 text-xs rounded-md',
+      },
+    },
   },
 
   tooltip: {
-    base: "absolute inline-block z-50 rounded-md py-2 px-3 text-sm font-medium shadow-md",
+    base: 'absolute inline-block z-50 rounded-md py-2 px-3 text-sm font-medium shadow-md',
     style: {
-      light: "border bg-popover text-popover-foreground",
+      light: 'border bg-popover text-popover-foreground',
     },
-    animation: "transition-opacity"
+    animation: 'transition-opacity',
   },
 
   // Add Sidebar theme
   sidebar: {
     root: {
-      base: "h-full hidden sm:flex",
-      inner: "h-full overflow-y-auto overflow-x-hidden rounded-none bg-primary py-4 px-3 shadow-lg text-primary-foreground"
+      base: 'h-full hidden sm:flex',
+      inner:
+        'h-full overflow-y-auto overflow-x-hidden rounded-none bg-primary py-4 px-3 shadow-lg text-primary-foreground',
     },
     logo: {
-      base: "mb-2 flex items-center justify-center h-16 border-b border-primary-foreground/10 p-0",
-      img: "",
+      base: 'mb-2 flex items-center justify-center h-16 border-b border-primary-foreground/10 p-0',
+      img: '',
     },
     items: {
-      base: "pt-4",
+      base: 'pt-4',
     },
     itemGroup: {
-      base: "space-y-2 border-t-0 pt-0 first:mt-0 first:border-t-0 first:pt-0",
+      base: 'space-y-2 border-t-0 pt-0 first:mt-0 first:border-t-0 first:pt-0',
     },
     item: {
-      base: "flex items-center justify-center rounded-md p-3 text-base font-normal text-primary-foreground transition-colors duration-150 hover:bg-primary/80 [&>span]:hidden",
-      active: "bg-primary/90 text-primary-foreground",
+      base: 'flex items-center justify-center rounded-md p-3 text-base font-normal text-primary-foreground transition-colors duration-150 hover:bg-primary/80 [&>span]:hidden',
+      active: 'bg-primary/90 text-primary-foreground',
       icon: {
-        base: "h-5 w-5 flex-shrink-0 text-primary-foreground transition duration-75",
-        active: "text-primary-foreground",
+        base: 'h-5 w-5 flex-shrink-0 text-primary-foreground transition duration-75',
+        active: 'text-primary-foreground',
       },
-    }
-  }
+    },
+  },
 } as const;
 
 // Define custom CSS component classes
 export const customComponents = {
   // Theme toggle positioning - scrollbar-aware
-  themeToggleContainer: "fixed top-3 z-50 bg-background/10 backdrop-blur-sm rounded-full shadow-sm p-0.5 right-0 mr-3 sm:mr-6 md:mr-10",
-  
+  themeToggleContainer:
+    'fixed top-3 z-50 bg-background/10 backdrop-blur-sm rounded-full shadow-sm p-0.5 right-0 mr-3 sm:mr-6 md:mr-10',
+
   // Education degree badges
-  educationBadge: "dark:bg-primary/30 dark:text-primary-foreground/95 dark:border-primary/40 dark:font-medium dark:shadow-sm",
+  educationBadge:
+    'dark:bg-primary/30 dark:text-primary-foreground/95 dark:border-primary/40 dark:font-medium dark:shadow-sm',
 };
 
 // Create a configuration object
@@ -145,4 +150,4 @@ const themeConfig = {
 };
 
 // Export the config
-export default themeConfig; 
+export default themeConfig;
