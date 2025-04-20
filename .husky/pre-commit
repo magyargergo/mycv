@@ -1,6 +1,14 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Simple reminder - no execution
+echo ""
+echo "⚠️  REMINDER: Make sure you've run linting/formatting before committing:"
+echo "   npm run check-code"
+echo ""
+echo "   To skip this reminder, use: git commit --no-verify"
+echo ""
+
 # Check if we're running on Windows
 case "$(uname -s)" in
     *WIN*|*MINGW*|*MSYS*)
