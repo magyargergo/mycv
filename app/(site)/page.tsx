@@ -16,12 +16,16 @@ export interface SectionData {
 }
 
 // Helper to validate section type
-const isValidSection = (section: any): section is SectionType => {
+const isValidSection = (section: string): section is SectionType => {
     return ['about', 'experience', 'education'].includes(section);
 };
 
-// Accept searchParams prop
-export default async function Home({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined }}) {
+// Accept searchParams prop with proper typing
+export default async function Home({ 
+    searchParams 
+}: { 
+    searchParams: Record<string, string | string[] | undefined>
+}) {
     const pageData = await getResumeData();
 
     // Determine initial section from searchParams, default to 'about'

@@ -5,7 +5,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { getResumeData } from "@/lib/data";
-import Script from 'next/script';
 import { themeScript } from '@/theme/hydration';
 
 // Configure Inter font

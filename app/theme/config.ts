@@ -136,10 +136,13 @@ export const customComponents = {
   educationBadge: "dark:bg-primary/30 dark:text-primary-foreground/95 dark:border-primary/40 dark:font-medium dark:shadow-sm",
 };
 
-// Export everything from a single location
-export default {
+// Create a configuration object
+const themeConfig = {
   themeColors,
   customTheme,
   customComponents,
   themeStorageKey: 'resume-theme',
-}; 
+};
+
+// Export the config
+export default themeConfig; 
