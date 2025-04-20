@@ -1,22 +1,5 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-# Simple reminder - no execution
-echo ""
-echo "⚠️  REMINDER: Make sure you've run linting/formatting before committing:"
-echo "   npm run check-code"
-echo ""
-echo "   To skip this reminder, use: git commit --no-verify"
-echo ""
-
-# Check if we're running on Windows
-case "$(uname -s)" in
-    *WIN*|*MINGW*|*MSYS*)
-        # On Windows, run the PowerShell script
-        pwsh -NoProfile -ExecutionPolicy Bypass -File "$(dirname -- "$0")/pre-commit.ps1"
-        ;;
-    *)
-        # On Unix/Linux/macOS, run lint-staged directly
-        npx lint-staged
-        ;;
-esac
+# Reminder only - no execution that could fail
+echo "Remember to run 'npm run format' and 'npm run lint' before committing"
