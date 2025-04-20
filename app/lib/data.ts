@@ -1,7 +1,7 @@
 import { cache } from 'react';
 import { promises as fs } from 'fs';
 import path from 'path';
-import { SectionData } from "@/page";
+import { SectionData } from "@/site/page";
 
 export const getResumeData = cache(async (): Promise<SectionData> => {
     try {
