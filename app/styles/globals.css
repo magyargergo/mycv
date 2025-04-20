@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme Variables */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 210 64% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 64% 49%;
+
+    --radius: 0.5rem;
+  }
+
+  html.dark {
+    /* Dark Theme Variables */
+    --background: 220 15% 16%;
+    --foreground: 210 10% 80%;
+
+    --card: 216 14% 20%;
+    --card-foreground: 210 10% 80%;
+
+    --popover: 216 14% 20%;
+    --popover-foreground: 210 10% 80%;
+
+    --primary: 208 55% 52%;
+    --primary-foreground: 0 0% 95%;
+
+    --secondary: 215 14% 25%;
+    --secondary-foreground: 210 10% 80%;
+
+    --muted: 215 12% 22%;
+    --muted-foreground: 215 10% 60%;
+
+    --accent: 213 12% 26%;
+    --accent-foreground: 210 10% 80%;
+
+    --destructive: 0 50% 40%;
+    --destructive-foreground: 210 10% 80%;
+
+    --border: 216 15% 28%;
+    --input: 216 15% 28%;
+    --ring: 208 55% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Force scrollbar to prevent layout shifts */
+  html {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  /* Education degree badges */
+  .dark [color="info"].mb-3 {
+    @apply bg-primary/30 text-primary-foreground/95 border-primary/40 font-medium shadow-sm;
+  }
+  
+  /* Theme toggle container */
+  .theme-toggle-container {
+    @apply fixed top-3 z-50 bg-background/10 backdrop-blur-sm rounded-full shadow-sm p-0.5;
+    right: 0.75rem;
+  }
+  
+  @media (min-width: 640px) {
+    .theme-toggle-container {
+      right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .theme-toggle-container {
+      right: 2.5rem;
+    }
+  }
+} 
