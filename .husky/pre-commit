@@ -1,5 +1,12 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Reminder only - no execution that could fail
-echo "Remember to run 'npm run format' and 'npm run lint' before committing"
+echo "Running linting and formatting checks..."
+
+# Run ESLint
+echo "Running ESLint..."
+npm run lint
+
+# Run Prettier format check
+echo "Running Prettier format check..."
+npm run format:check

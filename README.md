@@ -2,6 +2,13 @@
 
 A modern, responsive resume website built with Next.js, Tailwind CSS, and Flowbite.
 
+[![ESLint](https://img.shields.io/badge/ESLint-Configured-green.svg)](https://eslint.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-Configured-purple.svg)](https://prettier.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black.svg)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC.svg)](https://tailwindcss.com/)
+[![Flowbite](https://img.shields.io/badge/Flowbite-Integrated-1A56DB.svg)](https://flowbite.com/)
+
 ## Project Structure
 
 The project follows a clean, organized structure for better maintainability:
@@ -54,6 +61,28 @@ The theme system is implemented with:
 - React context for theme state management
 - localStorage for persisting user preferences
 - Server/client hydration handling to prevent flicker
+
+## Code Quality
+
+This project uses several tools to ensure code quality:
+
+- **ESLint**: For code linting and best practices enforcement
+- **Prettier**: For consistent code formatting
+- **TypeScript**: For type safety and better developer experience
+- **Husky**: Git hooks to check code quality before commits
+
+Run these commands to maintain code quality:
+
+```bash
+# Check for linting issues
+npm run lint
+
+# Fix linting issues
+npm run lint:fix
+
+# Format code with Prettier
+npm run format
+```
 
 ## Development
 
