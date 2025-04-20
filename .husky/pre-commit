@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Check if we're running on Windows
+case "$(uname -s)" in
+    *WIN*|*MINGW*|*MSYS*)
+        # On Windows, run the PowerShell script
+        pwsh -NoProfile -ExecutionPolicy Bypass -File "$(dirname -- "$0")/pre-commit.ps1"
+        ;;
+    *)
+        # On Unix/Linux/macOS, run lint-staged directly
+        npx lint-staged
+        ;;
+esac
