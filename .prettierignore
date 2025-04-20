@@ -1,0 +1,24 @@
+# Build artifacts
+.next/
+build/
+dist/
+out/
+
+# Dependencies
+node_modules/
+
+# Public files
+public/
+
+# Generated files
+*.min.js
+*.lock
+package-lock.json
+
+# IDE files
+.idea/
+.vscode/
+
+# Cache
+.eslintcache
+.cache 
