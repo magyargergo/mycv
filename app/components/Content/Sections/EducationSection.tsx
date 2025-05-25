@@ -27,7 +27,8 @@ const EducationSection: React.FC<EducationSectionProps> = ({ data }) => {
 
               <Badge
                 color="info"
-                className={`mb-3 px-3 py-1.5 text-sm tracking-wide ${customComponents.educationBadge}`}
+                size="sm"
+                className={`mb-3 tracking-wide ${customComponents.educationBadge}`}
               >
                 {education.degree}
               </Badge>

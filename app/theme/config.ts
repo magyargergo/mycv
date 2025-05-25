@@ -80,16 +80,16 @@ export const customTheme: CustomFlowbiteTheme = {
 
   badge: {
     root: {
-      base: 'flex h-fit items-center gap-2 font-medium transition-colors rounded-sm',
+      base: 'flex h-fit items-center gap-2 font-medium transition-all duration-200 rounded-full',
       color: {
-        info: 'bg-primary/10 text-primary border border-primary/20 dark:bg-primary/20 dark:text-primary-foreground dark:border-primary/30 dark:font-medium',
+        info: 'bg-gradient-to-r from-primary/20 to-primary/10 text-primary border border-primary/30 shadow-sm hover:shadow hover:-translate-y-px dark:from-primary/30 dark:to-primary/20 dark:text-primary-foreground dark:border-primary/40 dark:font-medium',
         gray: 'bg-secondary text-secondary-foreground border',
         success: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
         purple: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400',
       },
       size: {
-        xs: 'p-1 text-xs rounded-sm',
-        sm: 'px-3 py-1.5 text-xs rounded-md',
+        xs: 'px-2 py-1 text-xs',
+        sm: 'px-3 py-1.5 text-xs',
       },
     },
   },

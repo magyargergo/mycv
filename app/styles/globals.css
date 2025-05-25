@@ -106,7 +106,7 @@
 @layer components {
   /* Education degree badges */
   .dark [color='info'].mb-3 {
-    @apply bg-primary/30 text-primary-foreground/95 border-primary/40 font-medium shadow-sm;
+    @apply bg-gradient-to-r from-primary/40 to-primary/30 text-primary-foreground/95 border-primary/40 font-medium shadow-sm;
   }
 
   /* Theme toggle container */

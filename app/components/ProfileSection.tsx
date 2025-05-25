@@ -55,12 +55,11 @@ const ProfileSection: React.FC = () => {
 
       {/* Increased body padding/spacing */}
       <div className="p-4 space-y-4 sm:p-6 sm:space-y-6">
-        {/* Smaller badges (xs) on mobile */}
-        <div className="flex flex-wrap gap-1.5">
+        {/* Improved badge layout with better spacing */}
+        <div className="flex flex-wrap gap-2">
           <Badge color="info" size="xs" className="sm:hidden">
             Full Stack
-          </Badge>{' '}
-          {/* Abbreviate? */}
+          </Badge>
           <Badge color="info" size="sm" className="hidden sm:inline-flex">
             Full Stack Development
           </Badge>

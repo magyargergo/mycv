@@ -23,7 +23,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ data }) => {
             <Timeline.Content>
               <Timeline.Title className="text-lg sm:text-xl font-bold text-foreground flex items-center flex-wrap gap-2 mb-4">
                 {company.name}
-                <Badge color="info" icon={FaClock}>
+                <Badge color="info" size="sm" icon={FaClock}>
                   {company.totalDuration}
                 </Badge>
               </Timeline.Title>
