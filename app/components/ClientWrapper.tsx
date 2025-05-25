@@ -58,14 +58,14 @@ export default function ClientWrapper({ initialData, initialSection }: ClientWra
         <div className="bg-background min-h-screen overflow-x-hidden">
           <AppSidebar onSelectSection={handleSectionChange} selectedSection={selectedSection} />
           <main className="sm:ml-[60px] transition-all pb-16 sm:pb-6">
-            <div className="max-w-6xl mx-auto p-6 md:p-8 lg:p-10">
-              <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                <div className="lg:col-span-2">
+            <div className="max-w-[90%] 2xl:max-w-[80%] mx-auto p-6 md:p-8 lg:p-10">
+              <div className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-7 gap-8">
+                <div className="lg:col-span-2 xl:col-span-2">
                   <div className="sticky top-6">
                     <ProfileSection />
                   </div>
                 </div>
-                <div className="lg:col-span-3">
+                <div className="lg:col-span-3 xl:col-span-5">
                   <Card>
                     <ContentSection selectedSection={selectedSection} initialData={initialData} />
                   </Card>
