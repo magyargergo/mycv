@@ -11,6 +11,25 @@ const config: Config = {
     flowbite.content(),
   ],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+      landscape: { raw: '(orientation: landscape)' },
+      portrait: { raw: '(orientation: portrait)' },
+      mobile: { max: '767px' },
+      tablet: { min: '768px', max: '1023px' },
+      'mobile-landscape': { raw: '(max-width: 767px) and (orientation: landscape)' },
+      'mobile-portrait': { raw: '(max-width: 767px) and (orientation: portrait)' },
+      'tablet-landscape': {
+        raw: '(min-width: 768px) and (max-width: 1023px) and (orientation: landscape)',
+      },
+      'tablet-portrait': {
+        raw: '(min-width: 768px) and (max-width: 1023px) and (orientation: portrait)',
+      },
+    },
     extend: {
       colors: {
         border: 'hsl(var(--border))',

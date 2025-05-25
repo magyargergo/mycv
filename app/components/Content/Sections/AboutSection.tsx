@@ -16,18 +16,11 @@ const AboutSection: React.FC<AboutSectionProps> = ({ data }) => {
 
       <div>
         {data.content.map((paragraph, index) => (
-          <div key={index} className="mb-4">
-            {index === 0 ? (
-              <p className="text-foreground leading-relaxed text-sm sm:text-base">
-                <span className="text-primary font-bold text-xl sm:text-2xl float-left mr-1.5 sm:mr-2 mt-0.5 sm:mt-1">
-                  A
-                </span>
-                {paragraph.substring(1)}
-              </p>
-            ) : (
-              <p className="text-foreground leading-relaxed text-sm sm:text-base">{paragraph}</p>
-            )}
-            {index === 0 && <hr className="my-3 sm:my-4" />}
+          <div key={index} className="mb-3 md:mb-3.5 lg:mb-4">
+            <p className="text-foreground leading-relaxed text-sm md:text-[15px] lg:text-base text-wrap-balance text-break-word">
+              {paragraph}
+            </p>
+            {index === 0 && <hr className="my-3 md:my-3.5 lg:my-4" />}
           </div>
         ))}
       </div>

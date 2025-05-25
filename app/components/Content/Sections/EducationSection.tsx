@@ -18,24 +18,24 @@ const EducationSection: React.FC<EducationSectionProps> = ({ data }) => {
 
       <Timeline className="border-l">
         {data.items.map((education, index) => (
-          <Timeline.Item key={index} className="mb-10 last:mb-0">
+          <Timeline.Item key={index} className="mb-8 md:mb-9 lg:mb-10 last:mb-0">
             <Timeline.Point icon={FaUniversity} />
             <Timeline.Content>
-              <Timeline.Title className="text-lg sm:text-xl font-bold text-foreground mb-3">
+              <Timeline.Title className="text-lg md:text-[1.2rem] lg:text-xl font-bold text-foreground mb-2.5 md:mb-3 text-break-word">
                 {education.institution}
               </Timeline.Title>
 
               <Badge
                 color="info"
                 size="sm"
-                className={`mb-3 tracking-wide ${customComponents.educationBadge}`}
+                className={`mb-2.5 md:mb-3 tracking-wide text-break-word ${customComponents.educationBadge}`}
               >
                 {education.degree}
               </Badge>
 
-              <div className="flex items-center text-sm text-muted-foreground">
-                <FaCalendarAlt className="mr-2" />
-                {education.duration}
+              <div className="flex items-center text-xs md:text-sm text-muted-foreground">
+                <FaCalendarAlt className="mr-1.5 md:mr-2 flex-shrink-0" />
+                <span className="text-break-word">{education.duration}</span>
               </div>
             </Timeline.Content>
           </Timeline.Item>

@@ -3,46 +3,46 @@ import type { CustomFlowbiteTheme } from 'flowbite-react';
 // CSS Variable theme colors - to be used in globals.css
 export const themeColors = {
   light: {
-    background: '0 0% 100%', // white
-    foreground: '222 47% 11%', // dark gray/blue
-    card: '0 0% 100%', // white
-    cardForeground: '222 47% 11%',
+    background: '210 33% 99%', // very light blue-gray for subtle sophistication
+    foreground: '220 35% 15%', // deep blue-gray for better readability
+    card: '0 0% 100%', // pure white for cards
+    cardForeground: '220 35% 15%',
     popover: '0 0% 100%',
-    popoverForeground: '222 47% 11%',
-    primary: '210 64% 49%', // More subtle blue
+    popoverForeground: '220 35% 15%',
+    primary: '215 60% 45%', // professional blue, slightly deeper
     primaryForeground: '0 0% 100%', // white
-    secondary: '210 40% 96%', // gray-100
-    secondaryForeground: '222 47% 11%',
-    muted: '210 40% 96%', // gray-100
-    mutedForeground: '215 20% 65%', // gray-500
-    accent: '210 40% 96%', // gray-100
-    accentForeground: '222 47% 11%',
+    secondary: '210 30% 97%', // subtle light blue-gray
+    secondaryForeground: '220 35% 15%',
+    muted: '210 30% 97%',
+    mutedForeground: '215 25% 45%', // balanced muted text
+    accent: '215 25% 94%', // subtle accent
+    accentForeground: '220 35% 15%',
     destructive: '0 84% 60%',
     destructiveForeground: '0 0% 100%',
-    border: '214 32% 91%', // gray-200
+    border: '214 32% 91%',
     input: '214 32% 91%',
-    ring: '210 64% 49%', // focus ring - blue
+    ring: '215 60% 45%', // focus ring - matches primary
   },
   dark: {
-    background: '220 15% 16%', // neutral dark gray with hint of warmth
-    foreground: '210 10% 80%', // softer, slightly warm white text
-    card: '216 14% 20%', // subtle difference from background
-    cardForeground: '210 10% 80%',
-    popover: '216 14% 20%',
-    popoverForeground: '210 10% 80%',
-    primary: '208 55% 52%', // slightly desaturated, warmer blue
-    primaryForeground: '0 0% 95%',
-    secondary: '215 14% 25%', // subtle secondary
-    secondaryForeground: '210 10% 80%',
-    muted: '215 12% 22%',
-    mutedForeground: '215 10% 60%', // balanced muted text
-    accent: '213 12% 26%', // subtle accent with reduced saturation
-    accentForeground: '210 10% 80%',
+    background: '222 20% 14%', // rich dark blue-gray
+    foreground: '210 15% 90%', // softer white text for better readability
+    card: '223 18% 18%', // subtle difference from background
+    cardForeground: '210 15% 90%',
+    popover: '223 18% 18%',
+    popoverForeground: '210 15% 90%',
+    primary: '215 55% 50%', // vibrant but professional blue
+    primaryForeground: '0 0% 100%',
+    secondary: '222 16% 22%', // subtle secondary
+    secondaryForeground: '210 15% 90%',
+    muted: '222 14% 20%',
+    mutedForeground: '215 12% 65%', // balanced muted text
+    accent: '223 15% 24%', // subtle accent
+    accentForeground: '210 15% 90%',
     destructive: '0 50% 40%', // muted red
-    destructiveForeground: '210 10% 80%',
-    border: '216 15% 28%', // subtle border
-    input: '216 15% 28%',
-    ring: '208 55% 52%', // focus ring - matches primary
+    destructiveForeground: '210 15% 90%',
+    border: '223 18% 25%', // subtle border
+    input: '223 18% 25%',
+    ring: '215 55% 50%', // focus ring - matches primary
   },
 };
 
