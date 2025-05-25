@@ -21,7 +21,7 @@ const EducationSection: React.FC<EducationSectionProps> = ({ data }) => {
           <Timeline.Item key={index} className="mb-10 last:mb-0">
             <Timeline.Point icon={FaUniversity} />
             <Timeline.Content>
-              <Timeline.Title className="text-xl font-bold text-foreground mb-3">
+              <Timeline.Title className="text-lg sm:text-xl font-bold text-foreground mb-3">
                 {education.institution}
               </Timeline.Title>
 

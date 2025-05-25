@@ -59,6 +59,21 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
       },
+      fontSize: {
+        xs: ['0.8125rem', { lineHeight: '1.1rem' }],
+        sm: ['0.9375rem', { lineHeight: '1.35rem' }],
+        base: ['1.0625rem', { lineHeight: '1.6rem' }],
+        lg: ['1.1875rem', { lineHeight: '1.85rem' }],
+        xl: ['1.3125rem', { lineHeight: '1.85rem' }],
+        '2xl': ['1.5625rem', { lineHeight: '2.1rem' }],
+        '3xl': ['1.9375rem', { lineHeight: '2.35rem' }],
+        '4xl': ['2.3125rem', { lineHeight: '2.6rem' }],
+        '5xl': ['3.0625rem', { lineHeight: '1.1' }],
+        '6xl': ['3.8125rem', { lineHeight: '1.1' }],
+        '7xl': ['4.5625rem', { lineHeight: '1.1' }],
+        '8xl': ['6.0625rem', { lineHeight: '1.1' }],
+        '9xl': ['8.0625rem', { lineHeight: '1.1' }],
+      },
       animation: {
         fadeIn: 'fadeIn 0.3s ease-in-out',
       },

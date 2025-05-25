@@ -74,11 +74,31 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-size: 16px; /* Base font size */
   }
   /* Force scrollbar to prevent layout shifts */
   html {
     scrollbar-gutter: stable;
     overflow-y: scroll;
+  }
+
+  /* Responsive font size adjustments */
+  @media (max-width: 640px) {
+    body {
+      font-size: 15px; /* Slightly smaller on mobile */
+    }
+  }
+
+  @media (min-width: 1280px) {
+    body {
+      font-size: 17px; /* Slightly larger on large screens */
+    }
+  }
+
+  @media (min-width: 1536px) {
+    body {
+      font-size: 18px; /* Even larger on extra large screens */
+    }
   }
 }
 
