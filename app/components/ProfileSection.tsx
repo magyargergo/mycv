@@ -29,16 +29,16 @@ const ProfileSection: React.FC = () => {
 
   return (
     <Card>
-      {/* Use primary background gradient */}
-      <div className="group flex items-center p-3 sm:p-5 bg-gradient-to-r from-primary to-primary/90 -m-6 mb-0 rounded-t-lg">
-        {/* Smaller profile picture on mobile */}
-        <div className="relative w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-white flex-shrink-0">
+      {/* Use primary background gradient with increased padding */}
+      <div className="group flex items-center p-4 sm:p-6 bg-gradient-to-r from-primary to-primary/90 -m-6 mb-0 rounded-t-lg">
+        {/* Larger profile picture with responsive sizing */}
+        <div className="relative w-16 h-16 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white flex-shrink-0">
           {/* Add transition and group-hover scale effect */}
           <Image
             src="/avatars/me.jpeg"
             alt="Gergo Magyar"
             fill
-            sizes="(max-width: 640px) 56px, 80px"
+            sizes="(max-width: 640px) 64px, 96px"
             className="object-cover object-[center_25%] transition-transform duration-300 ease-in-out group-hover:scale-110"
           />
         </div>
@@ -53,8 +53,8 @@ const ProfileSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Reduce body padding/spacing for mobile */}
-      <div className="p-3 space-y-3 sm:p-5 sm:space-y-6">
+      {/* Increased body padding/spacing */}
+      <div className="p-4 space-y-4 sm:p-6 sm:space-y-6">
         {/* Smaller badges (xs) on mobile */}
         <div className="flex flex-wrap gap-1.5">
           <Badge color="info" size="xs" className="sm:hidden">
@@ -75,6 +75,12 @@ const ProfileSection: React.FC = () => {
           </Badge>
           <Badge color="info" size="sm" className="hidden sm:inline-flex">
             Permanent UK Resident
+          </Badge>
+          <Badge color="info" size="xs" className="sm:hidden">
+            Full-time Employee
+          </Badge>
+          <Badge color="info" size="sm" className="hidden sm:inline-flex">
+            Full-time Employee
           </Badge>
         </div>
 
