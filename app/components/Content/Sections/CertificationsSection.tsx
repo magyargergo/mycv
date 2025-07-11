@@ -28,9 +28,10 @@ const CertificationsSection: React.FC<CertificationsSectionProps> = ({ data }) =
       <Timeline className="border-l border-border/70">
         {data.items.map((cert, index) => {
           const IconComponent = getIconForCertification(cert.name);
-          
+
           const cardContent = (
-            <div className={`
+            <div
+              className={`
               flex items-start gap-3 
               p-3 md:p-4 
               rounded-lg bg-secondary/30 
@@ -38,25 +39,26 @@ const CertificationsSection: React.FC<CertificationsSectionProps> = ({ data }) =
               ${cert.verificationUrl ? 'hover:bg-secondary/50 cursor-pointer active:scale-[0.99] sm:hover:scale-[1.01]' : 'hover:bg-secondary/40'}
               touch-manipulation
               w-full
-            `}>
+            `}
+            >
               {/* Image Container */}
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex-shrink-0 rounded-md overflow-hidden bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-700 p-1.5 sm:p-2 shadow-sm border border-gray-200 dark:border-gray-600">
-                <Image 
-                  src={cert.image} 
-                  alt={cert.name} 
-                  fill 
+                <Image
+                  src={cert.image}
+                  alt={cert.name}
+                  fill
                   className="object-contain"
                   priority={index < 2}
                 />
               </div>
-              
+
               {/* Content Container */}
               <div className="flex-grow min-w-0 overflow-hidden">
                 {/* Certification Name */}
                 <h4 className="text-sm sm:text-base font-semibold text-foreground mb-1.5 leading-tight break-words">
                   {cert.name}
                 </h4>
-                
+
                 {/* Badges Row */}
                 <div className="flex flex-wrap items-center gap-1.5 mb-2">
                   <Badge
@@ -67,16 +69,12 @@ const CertificationsSection: React.FC<CertificationsSectionProps> = ({ data }) =
                     Foundational
                   </Badge>
                   {cert.issued && (
-                    <Badge
-                      color="gray"
-                      size="xs"
-                      className="text-xs px-2 py-0.5 flex-shrink-0"
-                    >
+                    <Badge color="gray" size="xs" className="text-xs px-2 py-0.5 flex-shrink-0">
                       {cert.issued}
                     </Badge>
                   )}
                 </div>
-                
+
                 {/* Issuer and Verify */}
                 <div className="flex items-center justify-between">
                   <p className="text-xs sm:text-sm text-muted-foreground truncate mr-2">
@@ -92,15 +90,12 @@ const CertificationsSection: React.FC<CertificationsSectionProps> = ({ data }) =
               </div>
             </div>
           );
-          
+
           return (
-            <Timeline.Item
-              key={index}
-              className="mb-3 sm:mb-4 last:mb-0"
-            >
-              <Timeline.Point 
-                icon={IconComponent} 
-                className="bg-secondary text-primary shadow-sm" 
+            <Timeline.Item key={index} className="mb-3 sm:mb-4 last:mb-0">
+              <Timeline.Point
+                icon={IconComponent}
+                className="bg-secondary text-primary shadow-sm"
               />
               <Timeline.Content className="ml-2 sm:ml-4 w-full overflow-hidden">
                 {cert.verificationUrl ? (
@@ -114,9 +109,7 @@ const CertificationsSection: React.FC<CertificationsSectionProps> = ({ data }) =
                     {cardContent}
                   </a>
                 ) : (
-                  <div className="block w-full">
-                    {cardContent}
-                  </div>
+                  <div className="block w-full">{cardContent}</div>
                 )}
               </Timeline.Content>
             </Timeline.Item>
