@@ -1,17 +1,19 @@
 {
-  "title": "AWS Certifications",
+  "title": "Certifications",
   "items": [
     {
       "name": "AWS Certified Cloud Practitioner",
       "issuer": "Amazon Web Services",
-      "image": "/certificates/aws-cloud-practitioner.svg",
-      "issued": "May 2024"
+      "image": "/certificates/aws-cloud-practitioner.png",
+      "issued": "June 2025",
+      "verificationUrl": "https://www.credly.com/badges/2a34d9ef-93f1-4202-90ba-380fa8d7635f/linked_in_profile"
     },
     {
       "name": "AWS Certified AI Practitioner",
       "issuer": "Amazon Web Services",
-      "image": "/certificates/aws-ai-practitioner.svg",
-      "issued": "December 2024"
+      "image": "/certificates/aws-ai-practitioner.png",
+      "issued": "July 2025",
+      "verificationUrl": "https://www.credly.com/badges/f8d7ebda-0e68-42f4-bd73-931ea454ac69/linked_in_profile"
     }
   ]
 }

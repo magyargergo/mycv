@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <polygon points="50,2 93,25 93,75 50,98 7,75 7,25" fill="#fff" stroke="#232F3E" stroke-width="4"/>
-  <polygon points="70,15 85,25 70,35" fill="#FF9900"/>
-  <text x="50" y="42" text-anchor="middle" font-size="10" font-family="Arial" fill="#232F3E">AWS Certified</text>
-  <text x="50" y="60" text-anchor="middle" font-size="9" font-family="Arial" fill="#232F3E">Cloud Practitioner</text>
-</svg>

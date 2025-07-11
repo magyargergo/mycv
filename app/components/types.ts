@@ -20,6 +20,7 @@ interface CertificationItem {
   issuer: string;
   image: string;
   issued?: string;
+  verificationUrl?: string;
 }
 
 export type SectionType = 'about' | 'education' | 'experience' | 'certifications';

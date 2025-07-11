@@ -1,4 +1,4 @@
-import { FaUser, FaBriefcase, FaGraduationCap, FaCertificate } from 'react-icons/fa';
+import { FaUser, FaBriefcase, FaGraduationCap, FaMedal } from 'react-icons/fa';
 import { SectionType } from '@/components/types';
 
 export const NAV_ITEMS = [
@@ -22,7 +22,7 @@ export const NAV_ITEMS = [
   },
   {
     label: 'Certifications',
-    icon: FaCertificate,
+    icon: FaMedal,
     section: 'certifications' as SectionType,
     description: 'Professional certificates',
   },
