@@ -4,6 +4,7 @@ import React from 'react';
 import EducationSection from './Sections/EducationSection';
 import ExperienceSection from './Sections/ExperienceSection';
 import AboutSection from './Sections/AboutSection';
+import CertificationsSection from './Sections/CertificationsSection';
 import { SectionData } from '@/site/page';
 import { SectionType } from '@/components/types';
 
@@ -19,6 +20,9 @@ const ContentSection: React.FC<SectionProps> = ({ selectedSection, initialData }
       {selectedSection === 'about' && <AboutSection data={initialData.about} />}
       {selectedSection === 'experience' && <ExperienceSection data={initialData.experience} />}
       {selectedSection === 'education' && <EducationSection data={initialData.education} />}
+      {selectedSection === 'certifications' && (
+        <CertificationsSection data={initialData.certifications} />
+      )}
     </div>
   );
 };

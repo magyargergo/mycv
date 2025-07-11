@@ -35,7 +35,7 @@ const ProfileSection: React.FC = () => {
           {/* Improved transition effects */}
           <Image
             src="/avatars/me.jpeg"
-            alt="Gergo Magyar"
+            alt="Gary Magyar"
             fill
             sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
             className="object-cover object-[center_25%] transition-all duration-300 ease-out group-hover:scale-110"
@@ -45,7 +45,7 @@ const ProfileSection: React.FC = () => {
         {/* Improved text spacing and hierarchy */}
         <div className="ml-3 mobile-landscape:ml-2 tablet-landscape:ml-3 md:ml-4 sm:ml-5 text-primary-foreground overflow-hidden">
           <h1 className="text-lg mobile-landscape:text-sm tablet-landscape:text-base md:text-xl sm:text-2xl font-bold text-break-word truncate tracking-tight">
-            Gergo Magyar
+            Gary Magyar
           </h1>
           {/* Better contrast and spacing */}
           <div className="flex items-center text-primary-foreground/90 text-xs md:text-sm mt-0.5">

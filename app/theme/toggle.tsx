@@ -3,7 +3,7 @@
 import { useTheme } from './provider';
 import { Button } from 'flowbite-react';
 import { useState, useEffect } from 'react';
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -37,9 +37,9 @@ export function ThemeToggle() {
       title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {theme === 'dark' ? (
-        <SunIcon className="h-5 w-5 select-none pointer-events-none" />
+        <FaSun className="h-5 w-5 select-none pointer-events-none" />
       ) : (
-        <MoonIcon className="h-5 w-5 select-none pointer-events-none" />
+        <FaMoon className="h-5 w-5 select-none pointer-events-none" />
       )}
       <span className="sr-only">
         {theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}

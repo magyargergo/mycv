@@ -15,7 +15,15 @@ export interface Company {
   roles: Role[];
 }
 
-export type SectionType = 'about' | 'education' | 'experience';
+interface CertificationItem {
+  name: string;
+  issuer: string;
+  image: string;
+  issued?: string;
+  verificationUrl?: string;
+}
+
+export type SectionType = 'about' | 'education' | 'experience' | 'certifications';
 
 export interface AboutSectionData {
   title: string;
@@ -30,4 +38,9 @@ export interface EducationSectionData {
 export interface ExperienceSectionData {
   title: string;
   companies: Company[];
+}
+
+export interface CertificationSectionData {
+  title: string;
+  items: CertificationItem[];
 }

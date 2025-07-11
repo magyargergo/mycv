@@ -4,6 +4,7 @@ import {
   AboutSectionData,
   EducationSectionData,
   ExperienceSectionData,
+  CertificationSectionData,
   SectionType,
 } from '@/components/types';
 import { getResumeData } from '@/lib/data';
@@ -13,11 +14,12 @@ export interface SectionData {
   about: AboutSectionData;
   education: EducationSectionData;
   experience: ExperienceSectionData;
+  certifications: CertificationSectionData;
 }
 
 // Helper to validate section type
 const isValidSection = (section: string): section is SectionType => {
-  return ['about', 'experience', 'education'].includes(section);
+  return ['about', 'experience', 'education', 'certifications'].includes(section);
 };
 
 // Accept searchParams prop with proper typing
