@@ -8,13 +8,13 @@
         {
           "title": "Senior Software Engineer",
           "responsibilities": [
-            "Led platform stability initiatives and incident response, successfully reducing critical incidents by 25% through proactive monitoring and root cause analysis",
-            "Built and maintained high-performance software solutions using Angular and PHP, significantly improving user experience and platform performance",
-            "Worked closely with cross-functional teams to ensure technical solutions align with business goals and deliver real value",
-            "Automated infrastructure deployment with Docker and Jenkins, cutting deployment time by 30% and making releases more reliable",
-            "Optimized development environments for email systems, reducing testing time by 20% and speeding up development cycles",
-            "Developed custom debugging tools for both remote and local environments, making developers more productive",
-            "Mentored junior team members and fostered a collaborative learning environment"
+            "Led platform stability initiatives and incident response using AWS monitoring and alerting services, successfully reducing critical incidents by 25% through proactive monitoring and root cause analysis",
+            "Built and maintained high-performance software solutions using Angular, PHP, and AWS cloud services, significantly improving user experience and platform scalability",
+            "Worked closely with cross-functional teams to design AWS-based infrastructure solutions that align with business goals and deliver measurable ROI",
+            "Automated infrastructure deployment with Docker, Jenkins, and AWS services, cutting deployment time by 30% and eliminating manual deployment risks",
+            "Optimized development environments and AWS cost management for email systems, reducing testing time by 20% and operational costs by 15%",
+            "Developed custom debugging tools and AWS monitoring dashboards for both remote and local environments, improving developer productivity and system visibility",
+            "Earned AWS Cloud and AI Practitioner certifications while mentoring junior team members on cloud-first development practices"
           ]
         },
         {

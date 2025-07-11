@@ -25,6 +25,15 @@ const CertificationsSection: React.FC<CertificationsSectionProps> = ({ data }) =
     <div className="flex flex-col w-full animate-fadeIn">
       <SectionHeader icon={<FaMedal />} title={data.title} />
 
+      {/* Value proposition for HR */}
+      <div className="mb-4 p-3 bg-success/10 border border-success/20 rounded-lg">
+        <p className="text-sm text-success-foreground">
+          <strong>Recent AWS Certifications:</strong> Validates expertise in cloud architecture and
+          AI services - critical skills for modern software development and cost-effective
+          infrastructure management.
+        </p>
+      </div>
+
       <Timeline className="border-l border-border/70">
         {data.items.map((cert, index) => {
           const IconComponent = getIconForCertification(cert.name);
