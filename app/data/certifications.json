@@ -1,0 +1,17 @@
+{
+  "title": "AWS Certifications",
+  "items": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "image": "/certificates/aws-cloud-practitioner.svg",
+      "issued": "May 2024"
+    },
+    {
+      "name": "AWS Certified AI Practitioner",
+      "issuer": "Amazon Web Services",
+      "image": "/certificates/aws-ai-practitioner.svg",
+      "issued": "December 2024"
+    }
+  ]
+}
