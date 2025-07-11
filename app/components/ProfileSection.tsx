@@ -185,7 +185,7 @@ const ProfileSection: React.FC = () => {
             aria-label="Value proposition"
           >
             <p className="text-[10px] mobile-landscape:text-[9px] tablet-landscape:text-[10px] md:text-xs lg:text-sm text-muted-foreground italic leading-tight">
-              "Delivering measurable business impact through technology"
+              &ldquo;Delivering measurable business impact through technology&rdquo;
             </p>
           </div>
         </div>
