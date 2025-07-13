@@ -59,13 +59,13 @@ export default function ClientWrapper({ initialData, initialSection }: ClientWra
           <AppSidebar onSelectSection={handleSectionChange} selectedSection={selectedSection} />
           <main className="sm:ml-[60px] md:ml-[70px] transition-all pb-16 sm:pb-6">
             <div className="max-w-[95%] mobile-landscape:max-w-[98%] tablet-landscape:max-w-[95%] 2xl:max-w-[80%] mx-auto p-4 mobile-landscape:p-3 tablet:p-6 md:p-8 lg:p-10">
-              <div className="grid grid-cols-1 mobile-landscape:grid-cols-2 tablet-landscape:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4 mobile-landscape:gap-3 tablet:gap-5 md:gap-8 lg:gap-10">
-                <div className="mobile-landscape:col-span-1 tablet-landscape:col-span-1 md:col-span-1 lg:col-span-2 xl:col-span-2">
+              <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7 gap-4 mobile-landscape:gap-3 tablet:gap-5 md:gap-8 lg:gap-10">
+                <div className="sm:col-span-1 md:col-span-1 lg:col-span-2 xl:col-span-2">
                   <div className="sticky top-3 mobile-landscape:top-2 tablet:top-4 md:top-6">
                     <ProfileSection />
                   </div>
                 </div>
-                <div className="mobile-landscape:col-span-1 tablet-landscape:col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-5">
+                <div className="sm:col-span-2 md:col-span-2 lg:col-span-3 xl:col-span-5">
                   <Card className="shadow-md hover:shadow-lg transition-all duration-300">
                     <ContentSection selectedSection={selectedSection} initialData={initialData} />
                   </Card>
