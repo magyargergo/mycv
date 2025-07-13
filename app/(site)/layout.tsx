@@ -91,15 +91,15 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 // JSON-LD Structured Data for better SEO
-const structuredData = {
+const getStructuredData = (baseUrl: string) => ({
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Gary Magyar',
   jobTitle: 'Senior Software Engineer',
   description:
     'AWS Certified Senior Software Engineer with 9+ years experience in full-stack development and cloud architecture.',
-  url: process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com',
-  image: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'}/avatars/me.jpeg`,
+  url: baseUrl,
+  image: `${baseUrl}/avatars/me.jpeg`,
   sameAs: ['https://linkedin.com/in/gergomagyar', 'https://github.com/magyargergo'],
   address: {
     '@type': 'PostalAddress',
@@ -127,9 +127,11 @@ const structuredData = {
     '@type': 'Organization',
     name: 'Freelancer Outsourcing UK Limited',
   },
-};
+});
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mycv.gergomagyar.com';
+
   return (
     <html lang="en-GB" className={inter.className}>
       <head>
@@ -153,7 +155,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
+            __html: JSON.stringify(getStructuredData(baseUrl)),
           }}
         />
 

@@ -6,6 +6,7 @@ interface EducationItem {
 
 export interface Role {
   title: string;
+  duration: string;
   responsibilities: string[];
 }
 
@@ -23,7 +24,7 @@ interface CertificationItem {
   verificationUrl?: string;
 }
 
-export type SectionType = 'about' | 'education' | 'experience' | 'certifications';
+export type SectionType = 'about' | 'education' | 'experience' | 'certifications' | 'skills';
 
 export interface AboutSectionData {
   title: string;
@@ -43,4 +44,22 @@ export interface ExperienceSectionData {
 export interface CertificationSectionData {
   title: string;
   items: CertificationItem[];
+}
+
+interface Skill {
+  name: string;
+  level: string;
+  keywords: string[];
+}
+
+interface SkillCategory {
+  category: string;
+  skills: Skill[];
+}
+
+export interface SkillsSectionData {
+  title: string;
+  categories: SkillCategory[];
+  certifications: string[];
+  businessSkills: string[];
 }

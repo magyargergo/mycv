@@ -16,14 +16,33 @@ import Image from 'next/image';
 import SocialLink from './SocialLink';
 
 const ProfileSection: React.FC = () => {
-  const handleDownload = () => {
-    const pdfUrl = '/assets/documents/Gergo_Magyar_CV.pdf';
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'Gergo_Magyar_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = async () => {
+    try {
+      const response = await fetch('/api/generate-cv');
+      if (!response.ok) {
+        throw new Error('Failed to generate CV');
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Gary_Magyar_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading CV:', error);
+      // Fallback to static PDF if API fails
+      const pdfUrl = '/assets/documents/Gergo_Magyar_CV.pdf';
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'Gergo_Magyar_CV.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
   return (
@@ -199,15 +218,15 @@ const ProfileSection: React.FC = () => {
             color="blue"
             size="sm"
             onClick={handleDownload}
-            className="w-full mb-3 mobile-landscape:mb-1.5 tablet-landscape:mb-2 md:mb-3 lg:mb-4 xl:mb-5 overflow-hidden shadow-sm hover:shadow transition-all duration-200 hover:-translate-y-0.5 text-xs mobile-landscape:text-[10px] tablet-landscape:text-sm md:text-sm lg:text-base py-1.5 mobile-landscape:py-1 tablet-landscape:py-1.5 md:py-2 lg:py-2.5 focus-ring"
+            className="w-full mb-3 mobile-landscape:mb-1.5 tablet-landscape:mb-2 md:mb-3 lg:mb-4 xl:mb-5 overflow-hidden shadow-sm hover:shadow transition-all duration-200 hover:-translate-y-0.5 text-xs mobile-landscape:text-[10px] tablet-landscape:text-sm md:text-sm lg:text-base py-1.5 mobile-landscape:py-1 tablet-landscape:py-1.5 md:py-2 lg:py-2.5 focus-ring flex items-center justify-center gap-2"
             aria-label="Download Gary Magyar's complete CV as PDF"
           >
             <FaDownload
-              className="mr-2 mobile-landscape:mr-1 tablet-landscape:mr-1.5 md:mr-2 lg:mr-2.5 flex-shrink-0"
-              size={12}
+              className="flex-shrink-0 mr-2 mobile-landscape:mr-1 tablet-landscape:mr-1.5 md:mr-2 lg:mr-2.5"
+              size={14}
               aria-hidden="true"
             />
-            <span className="text-break-word truncate font-medium">
+            <span className="text-break-word truncate font-medium leading-none">
               <span className="mobile-landscape:hidden tablet-landscape:inline md:inline lg:inline">
                 Download Full CV
               </span>

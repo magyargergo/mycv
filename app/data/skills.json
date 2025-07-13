@@ -1,0 +1,210 @@
+{
+  "title": "Technical Skills & Expertise",
+  "categories": [
+    {
+      "category": "Cloud & DevOps",
+      "skills": [
+        {
+          "name": "Amazon Web Services (AWS)",
+          "level": "Advanced",
+          "keywords": ["AWS", "Cloud Computing", "EC2", "S3", "Lambda", "CloudFormation"]
+        },
+        {
+          "name": "Docker & Containerization",
+          "level": "Advanced",
+          "keywords": ["Docker", "Container", "Kubernetes", "Containerization"]
+        },
+        {
+          "name": "CI/CD & Jenkins",
+          "level": "Advanced",
+          "keywords": [
+            "Jenkins",
+            "CI/CD",
+            "Continuous Integration",
+            "Continuous Deployment",
+            "Pipeline"
+          ]
+        },
+        {
+          "name": "Infrastructure as Code",
+          "level": "Intermediate",
+          "keywords": ["IaC", "Terraform", "CloudFormation", "Infrastructure"]
+        },
+        {
+          "name": "Monitoring & Alerting",
+          "level": "Advanced",
+          "keywords": ["CloudWatch", "Monitoring", "Alerting", "Logging", "Observability"]
+        }
+      ]
+    },
+    {
+      "category": "Programming Languages",
+      "skills": [
+        {
+          "name": "Java",
+          "level": "Expert",
+          "keywords": ["Java", "Spring Boot", "Spring Framework", "JVM", "Maven", "Gradle"]
+        },
+        {
+          "name": "PHP",
+          "level": "Advanced",
+          "keywords": ["PHP", "Laravel", "Symfony", "Composer", "Backend Development"]
+        },
+        {
+          "name": "Python",
+          "level": "Advanced",
+          "keywords": ["Python", "Django", "Flask", "Data Science", "Machine Learning"]
+        },
+        {
+          "name": "JavaScript/TypeScript",
+          "level": "Advanced",
+          "keywords": ["JavaScript", "TypeScript", "ES6", "Node.js", "NPM"]
+        },
+        {
+          "name": "C#",
+          "level": "Intermediate",
+          "keywords": ["C#", ".NET", "ASP.NET", "Microsoft", "Visual Studio"]
+        },
+        {
+          "name": "C++",
+          "level": "Intermediate",
+          "keywords": ["C++", "Performance", "Systems Programming", "Memory Management"]
+        }
+      ]
+    },
+    {
+      "category": "Frontend Technologies",
+      "skills": [
+        {
+          "name": "Angular",
+          "level": "Advanced",
+          "keywords": ["Angular", "TypeScript", "RxJS", "Angular CLI", "Component Architecture"]
+        },
+        {
+          "name": "React",
+          "level": "Intermediate",
+          "keywords": ["React", "JSX", "Redux", "React Hooks", "Component Development"]
+        },
+        {
+          "name": "HTML5 & CSS3",
+          "level": "Advanced",
+          "keywords": ["HTML5", "CSS3", "Responsive Design", "Flexbox", "Grid"]
+        },
+        {
+          "name": "Modern JavaScript",
+          "level": "Advanced",
+          "keywords": ["ES6+", "Async/Await", "Promises", "Webpack", "Babel"]
+        }
+      ]
+    },
+    {
+      "category": "Database Technologies",
+      "skills": [
+        {
+          "name": "PostgreSQL",
+          "level": "Advanced",
+          "keywords": ["PostgreSQL", "SQL", "Database Design", "Performance Tuning"]
+        },
+        {
+          "name": "MySQL",
+          "level": "Advanced",
+          "keywords": ["MySQL", "Database Administration", "Query Optimization", "Indexing"]
+        },
+        {
+          "name": "Graph Databases",
+          "level": "Intermediate",
+          "keywords": ["AgensGraph", "Neo4j", "Graph Database", "Cypher"]
+        },
+        {
+          "name": "NoSQL",
+          "level": "Intermediate",
+          "keywords": ["MongoDB", "Redis", "NoSQL", "Document Database"]
+        }
+      ]
+    },
+    {
+      "category": "Security & Authentication",
+      "skills": [
+        {
+          "name": "OAuth2 & OpenID Connect",
+          "level": "Advanced",
+          "keywords": ["OAuth2", "OpenID Connect", "Authentication", "Authorization"]
+        },
+        {
+          "name": "Keycloak",
+          "level": "Advanced",
+          "keywords": ["Keycloak", "SSO", "Identity Management", "Security"]
+        },
+        {
+          "name": "JWT & Session Management",
+          "level": "Advanced",
+          "keywords": ["JWT", "Session Management", "Token Authentication", "Security"]
+        },
+        {
+          "name": "API Security",
+          "level": "Advanced",
+          "keywords": ["API Security", "HTTPS", "SSL/TLS", "Security Best Practices"]
+        }
+      ]
+    },
+    {
+      "category": "Architecture & Design",
+      "skills": [
+        {
+          "name": "RESTful API Design",
+          "level": "Expert",
+          "keywords": ["REST API", "API Design", "Microservices", "Web Services"]
+        },
+        {
+          "name": "Microservices Architecture",
+          "level": "Advanced",
+          "keywords": ["Microservices", "Service Architecture", "Distributed Systems"]
+        },
+        {
+          "name": "System Design",
+          "level": "Advanced",
+          "keywords": ["System Design", "Scalability", "Performance", "Architecture"]
+        },
+        {
+          "name": "Design Patterns",
+          "level": "Advanced",
+          "keywords": ["Design Patterns", "Software Architecture", "Best Practices"]
+        }
+      ]
+    },
+    {
+      "category": "Development Tools & Methodologies",
+      "skills": [
+        {
+          "name": "Agile & Scrum",
+          "level": "Advanced",
+          "keywords": ["Agile", "Scrum", "Sprint Planning", "Team Leadership"]
+        },
+        {
+          "name": "Git & Version Control",
+          "level": "Expert",
+          "keywords": ["Git", "GitHub", "GitLab", "Version Control", "Branching"]
+        },
+        {
+          "name": "Testing & QA",
+          "level": "Advanced",
+          "keywords": ["Unit Testing", "Integration Testing", "Test Automation", "QA"]
+        },
+        {
+          "name": "Code Review & Mentoring",
+          "level": "Advanced",
+          "keywords": ["Code Review", "Mentoring", "Team Leadership", "Best Practices"]
+        }
+      ]
+    }
+  ],
+  "certifications": ["AWS Certified Cloud Practitioner", "AWS Certified AI Practitioner"],
+  "businessSkills": [
+    "Cross-functional Team Leadership",
+    "International Collaboration",
+    "Business Requirements Analysis",
+    "Cost Optimization",
+    "Performance Metrics & KPIs",
+    "Stakeholder Communication"
+  ]
+}

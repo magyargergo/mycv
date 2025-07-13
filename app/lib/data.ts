@@ -6,18 +6,21 @@ import { SectionData } from '@/site/page';
 export const getResumeData = cache(async (): Promise<SectionData> => {
   try {
     // Read all JSON files in parallel for better performance
-    const [aboutJson, educationJson, experienceJson, certificationsJson] = await Promise.all([
-      fs.readFile(path.join(process.cwd(), 'app/data/about.json'), 'utf8'),
-      fs.readFile(path.join(process.cwd(), 'app/data/education.json'), 'utf8'),
-      fs.readFile(path.join(process.cwd(), 'app/data/experience.json'), 'utf8'),
-      fs.readFile(path.join(process.cwd(), 'app/data/certifications.json'), 'utf8'),
-    ]);
+    const [aboutJson, educationJson, experienceJson, certificationsJson, skillsJson] =
+      await Promise.all([
+        fs.readFile(path.join(process.cwd(), 'app/data/about.json'), 'utf8'),
+        fs.readFile(path.join(process.cwd(), 'app/data/education.json'), 'utf8'),
+        fs.readFile(path.join(process.cwd(), 'app/data/experience.json'), 'utf8'),
+        fs.readFile(path.join(process.cwd(), 'app/data/certifications.json'), 'utf8'),
+        fs.readFile(path.join(process.cwd(), 'app/data/skills.json'), 'utf8'),
+      ]);
 
     // Parse JSON data
     const about = JSON.parse(aboutJson);
     const education = JSON.parse(educationJson);
     const experience = JSON.parse(experienceJson);
     const certifications = JSON.parse(certificationsJson);
+    const skills = JSON.parse(skillsJson);
 
     // Return typed data structure
     return {
@@ -36,6 +39,12 @@ export const getResumeData = cache(async (): Promise<SectionData> => {
       certifications: {
         title: certifications.title,
         items: certifications.items,
+      },
+      skills: {
+        title: skills.title,
+        categories: skills.categories,
+        certifications: skills.certifications,
+        businessSkills: skills.businessSkills,
       },
     };
   } catch (error) {

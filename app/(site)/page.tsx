@@ -5,6 +5,7 @@ import {
   EducationSectionData,
   ExperienceSectionData,
   CertificationSectionData,
+  SkillsSectionData,
   SectionType,
 } from '@/components/types';
 import { getResumeData } from '@/lib/data';
@@ -15,6 +16,7 @@ export interface SectionData {
   education: EducationSectionData;
   experience: ExperienceSectionData;
   certifications: CertificationSectionData;
+  skills: SkillsSectionData;
 }
 
 // Helper to validate section type
