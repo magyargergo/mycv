@@ -178,7 +178,7 @@ const ProfileSection: React.FC = () => {
             className="w-full shadow-sm hover:shadow transition-all duration-200 hover:-translate-y-0.5 text-sm sm:text-xs md:text-sm py-2.5 sm:py-2 md:py-2.5 focus-ring items-center justify-center gap-2"
             aria-label="Download Gary Magyar's complete CV as PDF"
           >
-            <FaDownload className="flex-shrink-0" size={14} aria-hidden="true" />
+            <FaDownload className="flex-shrink-0 self-center mr-2" size={14} aria-hidden="true" />
             <span className="font-medium">Download Full CV</span>
           </Button>
 
